@@ -1,10 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import Navbar from "../components-common/Navbar";
-import styles from '../styles/Home.module.scss'
+import Navbar from "../../components-common/Navbar";
+import styles from '../../styles/Tech.module.scss'
 
-const Home: NextPage = () => {
+const Tech: NextPage = () => {
   return (
     <div className={styles.container}>
       <Navbar/>
@@ -34,4 +34,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Tech
