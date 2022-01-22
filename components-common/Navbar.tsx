@@ -17,7 +17,13 @@ const Navbar = () => {
       </div>
       <div className={styles.menu}>
         <a href="#" onClick={() => router.push('/')}>ГЛАВНАЯ</a>
-        <a onClick={() => router.push('/tech')} className={styles.ml15} href="#">ТЕХНИКА</a>
+        <div className={styles.dropdown + ' ' + styles.ml15}>
+          <a onClick={() => router.push('/')} className={styles.dropbtn}>ТЕХНИКА</a>
+          <div className={styles.dropdown_content}>
+            <a onClick={() => router.push('/tech/opal-agri')}>Opal Agri</a>
+            <a onClick={() => router.push('/tech/gaspardo')}>Gaspardo</a>
+          </div>
+        </div>
         <a onClick={() => router.push('/zapch')} className={styles.ml15} href="#">ЗАПЧАСТИ</a>
         <a onClick={() => router.push('/service')} className={styles.ml15} href="#">СЕРВИС</a>
         <a onClick={() => router.push('/contacts')} className={styles.ml15} href="#">КОНТАКТЫ</a>
