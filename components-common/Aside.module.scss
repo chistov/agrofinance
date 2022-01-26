@@ -1,0 +1,10 @@
+.aside {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  flex-basis: 20%;
+}
+
+.active {
+  background-color: gray;
+}
