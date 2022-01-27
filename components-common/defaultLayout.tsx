@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import styles from "../styles/Layout.module.scss";
 
 const Header = () => null
 
@@ -19,7 +20,9 @@ const DefaultLayout  = ({ children }) => {
         {header ? header.props.children : null}
       </header>
       <main>
-        {body ? body.props.children : null}
+        <div className={styles.container}>
+          {body ? body.props.children : null}
+        </div>
       </main>
       <footer>
         {footer ? footer.props.children : null}

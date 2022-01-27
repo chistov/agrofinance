@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+
+  aside {
+    flex-basis: 20%;
+  }
+
+  div {
+    flex-basis: 80%;
+  }
+}
