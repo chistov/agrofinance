@@ -10,10 +10,8 @@ const Gaspardo: NextPage = () => {
     <DefaultLayout>
       <DefaultLayout.Header/>
       <DefaultLayout.Body>
-        <div className={styles.container}>
-          <Aside/>
+          <Aside items={['Подготовка почвы', 'Посев - удобрение', 'Заготовка сена', 'Уход за урожаем']}/>
           <Pochva/>
-        </div>
       </DefaultLayout.Body>
     </DefaultLayout>
   )

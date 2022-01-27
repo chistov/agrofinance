@@ -1,10 +1,16 @@
 .aside {
   position: sticky;
-  top: 0;
+  top: 20vh;
   height: 100vh;
-  flex-basis: 20%;
 }
 
 .active {
   background-color: gray;
+}
+
+.item {
+  padding-left: 20px;
+  font-family:  'Roboto', 'Arial Narrow', sans-serif;
+  font-size: 24px;
+  cursor: pointer;
 }
