@@ -3,10 +3,10 @@ import React from "react";
 
 const Pochva = () => {
   return (
-    <div  className={styles.container}>
+    <div> {/* Must be here! Global grid */ }
       <h2 className="subcategory">Вращающиеся фрезы</h2>
       <div className={styles.container}>
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/l/ru_RU">
             <div className="product">
@@ -25,7 +25,7 @@ const Pochva = () => {
           <div className="corner"></div>
         </div>
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/w/ru_RU">
             <div className="product">
@@ -45,7 +45,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/a/ru_RU">
             <div className="product">
@@ -67,7 +67,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/h/ru_RU">
             <div className="product">
@@ -87,7 +87,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/virat/ru_RU">
             <div className="product">
@@ -107,7 +107,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/u/ru_RU">
             <div className="product">
@@ -129,7 +129,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/b/ru_RU">
             <div className="product">
@@ -149,7 +149,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/b&#32;super/ru_RU">
             <div className="product">
@@ -169,7 +169,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/c/ru_RU">
             <div className="product">
@@ -191,7 +191,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/sc/ru_RU">
             <div className="product">
@@ -211,7 +211,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/g/ru_RU">
             <div className="product">
@@ -231,7 +231,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/puma/ru_RU">
             <div className="product">
@@ -253,7 +253,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/puma-cobra/ru_RU">
             <div className="product">
@@ -273,7 +273,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/pantera-l/ru_RU">
             <div className="product">
@@ -293,7 +293,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/pantera/ru_RU">
             <div className="product">
@@ -315,7 +315,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/jane/ru_RU">
             <div className="product">
@@ -341,7 +341,7 @@ const Pochva = () => {
       <h2 className="subcategory">Вращающиеся бороны</h2>
       <div className={styles.container}>
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/delfino-dl/ru_RU">
             <div className="product">
@@ -361,7 +361,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/delfino-super/ru_RU">
             <div className="product">
@@ -381,7 +381,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/daino-ds/ru_RU">
             <div className="product">
@@ -403,7 +403,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/drago-dc/ru_RU">
             <div className="product">
@@ -423,7 +423,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/dominator-dm/ru_RU">
             <div className="product">
@@ -443,7 +443,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/dominator-dm-rapido-plus/ru_RU">
             <div className="product">
@@ -465,7 +465,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/orso-rapido-plus-combi/ru_RU">
             <div className="product">
@@ -485,7 +485,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/corvo/ru_RU">
             <div className="product">
@@ -505,7 +505,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/falco/ru_RU">
             <div className="product">
@@ -527,7 +527,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/gabbiano/ru_RU">
             <div className="product">
@@ -547,7 +547,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/aquila/ru_RU">
             <div className="product">
@@ -567,7 +567,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/aquila-rapido-plus/ru_RU">
             <div className="product">
@@ -589,7 +589,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/toro-rapido-plus/ru_RU">
             <div className="product">
@@ -610,7 +610,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/jumbo-rapido-plus/ru_RU">
             <div className="product">
@@ -636,7 +636,7 @@ const Pochva = () => {
       <h2 className="subcategory">Мульчировщики</h2>
       <div className={styles.container}>
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/jolly-scarico-posteriore/ru_RU">
             <div className="product">
@@ -656,7 +656,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/furba/ru_RU">
             <div className="product">
@@ -676,7 +676,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/barbi/ru_RU">
             <div className="product">
@@ -698,7 +698,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/birba/ru_RU">
             <div className="product">
@@ -718,7 +718,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/brava/ru_RU">
             <div className="product">
@@ -738,7 +738,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/bella/ru_RU">
             <div className="product">
@@ -760,7 +760,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/corazza/ru_RU">
             <div className="product">
@@ -780,7 +780,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/tigre/ru_RU">
             <div className="product">
@@ -800,7 +800,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/giraffina/ru_RU">
             <div className="product">
@@ -822,7 +822,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/giraffetta/ru_RU">
             <div className="product">
@@ -842,7 +842,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/giraffa-l/ru_RU">
             <div className="product">
@@ -862,7 +862,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/giraffa/ru_RU">
             <div className="product">
@@ -884,7 +884,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/giraffona/ru_RU">
             <div className="product">
@@ -904,7 +904,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/bisonte/ru_RU">
             <div className="product">
@@ -924,7 +924,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/bufalo/ru_RU">
             <div className="product">
@@ -946,7 +946,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/chiara/ru_RU">
             <div className="product">
@@ -966,7 +966,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/tornado/ru_RU">
             <div className="product">
@@ -986,7 +986,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/leopard/ru_RU">
             <div className="product">
@@ -1008,7 +1008,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/gemella/ru_RU">
             <div className="product">
@@ -1034,7 +1034,7 @@ const Pochva = () => {
       <h2 className="subcategory">Косилки для коммунальных работ</h2>
       <div className={styles.container}>
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/margherita/ru_RU">
             <div className="product">
@@ -1054,7 +1054,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/cristina/ru_RU">
             <div className="product">
@@ -1074,7 +1074,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/martina/ru_RU">
             <div className="product">
@@ -1096,7 +1096,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/palma/ru_RU">
             <div className="product">
@@ -1116,7 +1116,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/camilla-2016/ru_RU">
             <div className="product">
@@ -1136,7 +1136,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/gaia/ru_RU">
             <div className="product">
@@ -1158,7 +1158,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/katia2016/ru_RU">
             <div className="product">
@@ -1178,7 +1178,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/lara/ru_RU">
             <div className="product">
@@ -1204,7 +1204,7 @@ const Pochva = () => {
       <h2 className="subcategory">Глубокорыхлители</h2>
       <div className={styles.container}>
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/pinocchio/ru_RU">
             <div className="product">
@@ -1224,7 +1224,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/attila/ru_RU">
             <div className="product">
@@ -1244,7 +1244,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/attila-idropneumatico/ru_RU">
             <div className="product">
@@ -1267,7 +1267,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/artiglio-s/ru_RU">
             <div className="product">
@@ -1287,7 +1287,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/artiglio-idropneumatico/ru_RU">
             <div className="product">
@@ -1308,7 +1308,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/artiglio-sxl/ru_RU">
             <div className="product">
@@ -1330,7 +1330,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/artiglio-folding/ru_RU">
             <div className="product">
@@ -1351,7 +1351,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/diablo/ru_RU">
             <div className="product">
@@ -1377,7 +1377,7 @@ const Pochva = () => {
       <h2 className="subcategory">Дисковые бороны</h2>
       <div className={styles.container}>
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/ufo-c/ru_RU">
             <div className="product">
@@ -1397,7 +1397,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/veloce/ru_RU">
             <div className="product">
@@ -1417,7 +1417,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/veloce-pieghevole-portato/ru_RU">
             <div className="product">
@@ -1439,7 +1439,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink"
              href="https://www2.maschio.com/catalog/product/veloce-pieghevole-semi-portato/ru_RU">
@@ -1461,7 +1461,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/ufo-usa/ru_RU">
             <div className="product">
@@ -1481,7 +1481,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/admiral-usa/ru_RU">
             <div className="product">
@@ -1503,7 +1503,7 @@ const Pochva = () => {
         <div className="clear"></div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/admiral/ru_RU">
             <div className="product">
@@ -1529,7 +1529,7 @@ const Pochva = () => {
       <h2 className="subcategory">Культиваторы для предпосевной подготовки почвы</h2>
       <div className={styles.container}>
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/grator/ru_RU">
             <div className="product">
@@ -1549,7 +1549,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/sandokan/ru_RU">
             <div className="product">
@@ -1575,7 +1575,7 @@ const Pochva = () => {
       <h2 className="subcategory">Зубчатые культиваторы</h2>
       <div className={styles.container}>
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/terremoto-3/ru_RU">
             <div className="product">
@@ -1595,7 +1595,7 @@ const Pochva = () => {
         </div>
 
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/dracula/ru_RU">
             <div className="product">
@@ -1621,7 +1621,7 @@ const Pochva = () => {
       <h2 className="subcategory">Плуги с параллелограммной системой настройки первого корпуса плуга</h2>
       <div className={styles.container}>
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/unico/ru_RU">
             <div className="product">
@@ -1647,7 +1647,7 @@ const Pochva = () => {
       <h2 className="subcategory">ПОЛУНАВЕСНЫЕ ПЛУГИ</h2>
       <div className={styles.container}>
 
-        <div className="productBorder">
+        <div className={styles.item}>
           <div className="corner top"></div>
           <a className="productLink" href="https://www2.maschio.com/catalog/product/mirco/ru_RU">
             <div className="product">

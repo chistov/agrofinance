@@ -4,5 +4,24 @@
 }
 
 .product_box {
-  width: 400px;
+  max-width: 45%;
+  border: solid 1px #d8d8d8;
+  padding: 15px;
+  //flex: 0 0 33.3%;
+  //width: 250px;
+  height: 450px;
+  margin: 10px 0 10px 10px;
+
+  .vspashka {
+    max-width: 33.3%;
+  }
+}
+
+.product_box_vspashka {
+  max-width: 45%;
+  border: solid 1px #d8d8d8;
+  padding: 15px;
+  //width: 250px;
+  height: 400px;
+  margin: 10px 0 10px 10px;
 }

@@ -4,9 +4,10 @@ import React, {useEffect} from "react";
 interface Props {
   items: string[];
   change: Function;
+  chosen: number;
 }
 
-const Aside = ({items, change}: Props) => {
+const Aside = ({items, change, chosen}: Props) => {
   let el = null;
   const toggleBg = (e: MouseEvent, idx:number) => {
     for(let i = 0; i < 4; ++i) {
@@ -21,13 +22,15 @@ const Aside = ({items, change}: Props) => {
     change(idx);
   };
 
+  console.log('init');
+
 
   // default
-  useEffect(() => {
-      const el = document.querySelector('#aside0');
-      console.log('works!: ', el);
-      el.style.backgroundColor = 'red';
-      el.style.color = 'white';
+  useEffect(() => { // document not available outside useEffect
+    const curr = document.querySelector('#aside' + chosen);
+    console.log('works!: ', curr);
+    curr.style.backgroundColor = 'red';
+    curr.style.color = 'white';
   })
 
   return (
