@@ -3,7 +3,7 @@ import React from "react";
 
 const Pochva = () => {
   return (
-    <div> {/* Must be here! Global grid */ }
+    <> {/* Must be here! Global grid */ }
       <h2 className="subcategory">Вращающиеся фрезы</h2>
       <div className={styles.container}>
         <div className={styles.item}>
@@ -1666,7 +1666,7 @@ const Pochva = () => {
           <div className="corner"></div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
