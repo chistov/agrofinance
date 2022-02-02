@@ -14,7 +14,7 @@ const DefaultLayout  = ({ children }) => {
   const footer = children.find(el => el.type === Footer)
 
   return (
-    <div className="container">
+    <div>
       <header>
         <Navbar/>
         {header ? header.props.children : null}
