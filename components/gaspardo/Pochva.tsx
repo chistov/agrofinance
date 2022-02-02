@@ -4,7 +4,7 @@ import React from "react";
 const Pochva = () => {
   return (
     <> {/* Must be here! Global grid */ }
-      <h2 className="subcategory">Вращающиеся фрезы</h2>
+      <h2 className={styles.subcategory}>Вращающиеся фрезы</h2>
       <div className={styles.container}>
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -338,7 +338,7 @@ const Pochva = () => {
       }
 
 
-      <h2 className="subcategory">Вращающиеся бороны</h2>
+      <h2 className={styles.subcategory}>Вращающиеся бороны</h2>
       <div className={styles.container}>
 
         <div className={styles.item}>
@@ -633,7 +633,7 @@ const Pochva = () => {
       }
 
 
-      <h2 className="subcategory">Мульчировщики</h2>
+      <h2 className={styles.subcategory}>Мульчировщики</h2>
       <div className={styles.container}>
 
         <div className={styles.item}>
@@ -1031,7 +1031,7 @@ const Pochva = () => {
       }
 
 
-      <h2 className="subcategory">Косилки для коммунальных работ</h2>
+      <h2 className={styles.subcategory}>Косилки для коммунальных работ</h2>
       <div className={styles.container}>
 
         <div className={styles.item}>
@@ -1201,7 +1201,7 @@ const Pochva = () => {
       }
 
 
-      <h2 className="subcategory">Глубокорыхлители</h2>
+      <h2 className={styles.subcategory}>Глубокорыхлители</h2>
       <div className={styles.container}>
 
         <div className={styles.item}>
@@ -1374,7 +1374,7 @@ const Pochva = () => {
       }
 
 
-      <h2 className="subcategory">Дисковые бороны</h2>
+      <h2 className={styles.subcategory}>Дисковые бороны</h2>
       <div className={styles.container}>
 
         <div className={styles.item}>
@@ -1526,7 +1526,7 @@ const Pochva = () => {
       }
 
 
-      <h2 className="subcategory">Культиваторы для предпосевной подготовки почвы</h2>
+      <h2 className={styles.subcategory}>Культиваторы для предпосевной подготовки почвы</h2>
       <div className={styles.container}>
 
         <div className={styles.item}>
@@ -1572,7 +1572,7 @@ const Pochva = () => {
       }
 
 
-      <h2 className="subcategory">Зубчатые культиваторы</h2>
+      <h2 className={styles.subcategory}>Зубчатые культиваторы</h2>
       <div className={styles.container}>
 
         <div className={styles.item}>
@@ -1618,7 +1618,7 @@ const Pochva = () => {
       }
 
 
-      <h2 className="subcategory">Плуги с параллелограммной системой настройки первого корпуса плуга</h2>
+      <h2 className={styles.subcategory}>Плуги с параллелограммной системой настройки первого корпуса плуга</h2>
       <div className={styles.container}>
 
         <div className={styles.item}>
@@ -1644,7 +1644,7 @@ const Pochva = () => {
       }
 
 
-      <h2 className="subcategory">ПОЛУНАВЕСНЫЕ ПЛУГИ</h2>
+      <h2 className={styles.subcategory}>ПОЛУНАВЕСНЫЕ ПЛУГИ</h2>
       <div className={styles.container}>
 
         <div className={styles.item}>

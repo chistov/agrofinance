@@ -1,3 +1,5 @@
+@import "styles/Common.module";
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -10,11 +12,3 @@
     padding: 15px;
   }
 }
-
-.subcategory {
-  display: inline-block;
-  font-size: 30px;
-  background-color: #ea3323;
-  color: white;
-}
-
