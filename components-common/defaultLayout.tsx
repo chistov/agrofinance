@@ -7,11 +7,12 @@ const Body = () => null
 
 const Footer = () => null
 
+// @ts-ignore
 const DefaultLayout  = ({ children }) => {
 
-  const header = children.find(el => el.type === Header)
-  const body = children.find(el => el.type === Body)
-  const footer = children.find(el => el.type === Footer)
+  const header = children.find((el: { type: () => null; }) => el.type === Header)
+  const body = children.find((el: { type: () => null; }) => el.type === Body)
+  const footer = children.find((el: { type: () => null; }) => el.type === Footer)
 
   return (
     <div>

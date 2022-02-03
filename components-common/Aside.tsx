@@ -8,33 +8,36 @@ interface Props {
 }
 
 const Aside = ({items, change, chosen}: Props) => {
-  let el = null;
-  const toggleBg = (e: MouseEvent, idx:number) => {
+  let el: HTMLElement | null = null;
+  const toggleBg = (e: React.MouseEvent<HTMLDivElement>, idx: number) => {
     for(let i = 0; i < 4; ++i) {
-      el = document.querySelector('#aside' + i);
-      el.style.backgroundColor = '#ffffff';
-      el.style.color = 'black';
+      if (el = document.querySelector('#aside' + i)) {
+        el.style.backgroundColor = '#f6f6f6';
+        el.style.color = 'black';
+      }
     }
 
-    e.target.style.backgroundColor = 'red';
-    e.target.style.color = 'white';
+    if(e !== null) {
+      //@ts-ignore
+      e.target.style.backgroundColor = 'red';
+      //@ts-ignore
+      e.target.style.color = 'white';
+    }
 
     change(idx);
   };
 
-  console.log('init');
-
-
   // default
   useEffect(() => { // document not available outside useEffect
-    const curr = document.querySelector('#aside' + chosen);
-    console.log('works!: ', curr);
-    curr.style.backgroundColor = 'red';
-    curr.style.color = 'white';
+    const curr: HTMLElement | null = document.querySelector('#aside' + chosen);
+    if( curr) {
+      curr.style.backgroundColor = 'red';
+      curr.style.color = 'white';
+    }
   })
 
   return (
-    <aside className={styles.aside}>
+    <aside id="aside-id" className={styles.aside}>
       {
         items.map((name, idx) =>
           <div id={"aside" + idx}

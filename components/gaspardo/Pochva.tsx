@@ -22,7 +22,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
         <div className={styles.item}>
@@ -41,7 +40,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -61,11 +59,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
-        <div className="clear"></div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -83,7 +77,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -103,9 +96,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -123,11 +114,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
-        <div className="clear"></div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -145,7 +132,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -165,9 +151,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -185,11 +169,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
-        <div className="clear"></div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -207,7 +187,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -227,7 +206,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -247,11 +225,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
-        <div className="clear"></div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -269,7 +243,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -289,7 +262,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -309,11 +281,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
-        <div className="clear"></div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -331,11 +299,8 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
       </div>
-      {/* end sub cat */
-      }
 
 
       <h2 className={styles.subcategory}>Вращающиеся бороны</h2>
@@ -357,7 +322,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -377,7 +341,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -397,11 +360,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
-        <div className="clear"></div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -419,9 +378,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -439,9 +396,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -459,11 +414,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
-        <div className="clear"></div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -481,9 +432,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -501,7 +450,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -521,11 +469,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
-        <div className="clear"></div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -543,9 +487,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -563,9 +505,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -583,11 +523,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
-        <div className="clear"></div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -606,9 +542,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -626,12 +560,8 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
       </div>
-      {/* end sub cat */
-      }
-
 
       <h2 className={styles.subcategory}>Мульчировщики</h2>
       <div className={styles.container}>
@@ -652,7 +582,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -672,7 +601,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -692,11 +620,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
-        <div className="clear"></div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -714,9 +638,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -734,7 +656,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -754,11 +675,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
-        <div className="clear"></div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -776,7 +693,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -796,9 +712,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -816,11 +730,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
-        <div className="clear"></div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -838,9 +748,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -858,7 +766,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -878,11 +785,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
-        <div className="clear"></div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -900,7 +803,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -920,7 +822,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -935,16 +836,11 @@ const Pochva = () => {
               </div>
               <div className="text">
                 <h2>BUFALO</h2>
-                <h3></h3>
                 <p>Working width: <span>250-280-310</span></p>
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
-        <div className="clear"></div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -962,7 +858,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -982,7 +877,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -1002,11 +896,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
-        <div className="clear"></div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -1024,12 +914,8 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
       </div>
-      {/* end sub cat */
-      }
-
 
       <h2 className={styles.subcategory}>Косилки для коммунальных работ</h2>
       <div className={styles.container}>
@@ -1045,12 +931,9 @@ const Pochva = () => {
               </div>
               <div className="text">
                 <h2>MARGHERITA</h2>
-                <h3></h3>
-
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -1065,14 +948,10 @@ const Pochva = () => {
               </div>
               <div className="text">
                 <h2>CRISTINA</h2>
-                <h3></h3>
-
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -1085,16 +964,10 @@ const Pochva = () => {
               </div>
               <div className="text">
                 <h2>MARTINA</h2>
-                <h3></h3>
-
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
-
-        <div className="clear"></div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -1112,7 +985,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -1132,7 +1004,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -1152,10 +1023,9 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
-        <div className="clear"></div>
+
 
 
         <div className={styles.item}>
@@ -1174,7 +1044,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -1194,7 +1063,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
       </div>
       {/* end sub cat */
@@ -1220,7 +1088,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -1240,7 +1107,6 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
 
@@ -1261,10 +1127,9 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
 
-        <div className="clear"></div>
+
 
 
         <div className={styles.item}>
@@ -1283,7 +1148,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
+
         </div>
 
 
@@ -1304,7 +1169,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
+
         </div>
 
 
@@ -1324,10 +1189,10 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
+
         </div>
 
-        <div className="clear"></div>
+
 
 
         <div className={styles.item}>
@@ -1347,7 +1212,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
+
         </div>
 
 
@@ -1367,7 +1232,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
+
         </div>
       </div>
       {/* end sub cat */
@@ -1393,7 +1258,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
+
         </div>
 
 
@@ -1413,7 +1278,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
+
         </div>
 
 
@@ -1433,10 +1298,10 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
+
         </div>
 
-        <div className="clear"></div>
+
 
 
         <div className={styles.item}>
@@ -1457,7 +1322,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
+
         </div>
 
 
@@ -1477,7 +1342,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
+
         </div>
 
 
@@ -1497,11 +1362,8 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
+
         </div>
-
-        <div className="clear"></div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
@@ -1519,7 +1381,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
+
         </div>
       </div>
       {/* end sub cat */
@@ -1545,7 +1407,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
+
         </div>
 
 
@@ -1565,7 +1427,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
+
         </div>
       </div>
       {/* end sub cat */
@@ -1591,7 +1453,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
+
         </div>
 
 
@@ -1611,7 +1473,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
+
         </div>
       </div>
       {/* end sub cat */
@@ -1637,7 +1499,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
+
         </div>
       </div>
       {/* end sub cat */
@@ -1663,7 +1525,7 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-          <div className="corner"></div>
+
         </div>
       </div>
     </>

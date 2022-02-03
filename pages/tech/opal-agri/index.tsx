@@ -1,3 +1,4 @@
+//@ts-nocheck
 import React, {useState} from "react";
 import {NextPage} from "next";
 import Kultivaciya from "../../../components/opal/kultivaciya";
@@ -13,6 +14,7 @@ const OpalAgri: NextPage = () => {
   const changeMenuItem = (curr:number) => {
     console.log('cb: ', curr);
     setIdx(curr);
+    window.scrollTo({top: 0});
   }
 
   return (
@@ -31,5 +33,3 @@ const OpalAgri: NextPage = () => {
       </DefaultLayout>
   )
 }
-
-export default OpalAgri

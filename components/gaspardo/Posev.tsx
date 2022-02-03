@@ -643,7 +643,7 @@ const Posev = () => {
               <div className="image">
 
 
-                <img src="../../../assets/Immagini-modelli/Modelli/_resampled/SetRatioSize300155-SCMARIA.jpg"
+                <img src="/assets_gaspardo/SetRatioSize300155-SCMARIA.jpg"
                      alt="SCMARIA"/>
 
               </div>

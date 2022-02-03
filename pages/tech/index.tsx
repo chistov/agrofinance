@@ -33,5 +33,3 @@ const Tech: NextPage = () => {
     </div>
   )
 }
-
-export default Tech
