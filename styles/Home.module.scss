@@ -7,11 +7,10 @@
 .main:before {
   content: '';
   position: absolute;
-  //top: 0;
   background-image: url("/assets/brand-combain.jpg");
 
   /* Full height */
-  height: 85%;
+  height: 88.9%;
   width: 100%;
 
 
@@ -20,26 +19,22 @@
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.3;
-  //padding: 4rem 0;
-  //flex: 1;
-  //display: flex;
-  //flex-direction: column;
-  //justify-content: center;
-  //align-items: center;
+  top: 90px;
+  z-index: 0;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
+//.footer {
+//  display: flex;
+//  flex: 1;
+//  padding: 2rem 0;
+//  border-top: 1px solid #eaeaea;
+//  justify-content: center;
+//  align-items: center;
+//}
+//
+//.footer a {
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  flex-grow: 1;
+//}

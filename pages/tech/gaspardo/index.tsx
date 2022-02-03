@@ -1,3 +1,4 @@
+//@ts-nocheck
 import {NextPage} from "next";
 import DefaultLayout from "../../../components-common/defaultLayout";
 import React, {useState} from "react";
@@ -13,6 +14,7 @@ const Gaspardo: NextPage = () => {
   const changeMenuItem = (curr: number) => {
     console.log('cb: ', curr);
     setIdx(curr);
+    window.scrollTo({top: 0});
   }
   return (
     <DefaultLayout>
@@ -31,5 +33,3 @@ const Gaspardo: NextPage = () => {
     </DefaultLayout>
   )
 }
-
-export default Gaspardo
