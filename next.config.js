@@ -20,7 +20,8 @@ const nextConfig = {
       '/': { page: '/' },
       '/tech/opal-agri': { page: '/tech/opal-agri' },
       '/tech/gaspardo': { page: '/tech/gaspardo' },
-      '/tech/opal-agri/item/[id]': { page: '/tech/opal-agri/item/' },
+      // '/tech/opal-agri/item/': { page: '/tech/opal-agri/item/1' },
+      '/tech/opal-agri/item/id': { page: '/tech/opal-agri/item/[id]' },
     }
   },
   generateBuildId: async () => {

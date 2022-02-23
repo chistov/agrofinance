@@ -17,7 +17,9 @@ interface IJson {
   extra: Array<{name: string, url: string}>
 }
 
-const OpalItem: NextPage = () => {
+// @ts-ignore
+const OpalItem = ({id}) => {
+  console.log('curr id: ', id);
   const router = useRouter();
 
   const [currId, setCurrId] = useState(0);
@@ -36,7 +38,7 @@ const OpalItem: NextPage = () => {
 
 
   useEffect(() => {
-    const { id } = router.query;
+    // const { id } = router.query;
     setCurrId(id ? +id : 0 );
     console.log('id: ', currId);
 
@@ -131,7 +133,7 @@ export async function getStaticPaths() {
 
   // Get the paths we want to pre-render based on posts
   const paths = ids.map(id => ({
-    params: { id: id + '' },
+    params: { id: (id + 1) + '' },
   }))
 
   // We'll pre-render only these paths at build time.
@@ -141,10 +143,11 @@ export async function getStaticPaths() {
 
 // This also gets called at build time
 // @ts-ignore
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params: {id} }) {
   // params contains the post `id`.
   // If the route is like /posts/1, then params.id is 1
+  if( !id ) id = 1;
 
   // Pass post data to the page via props
-  return { props:  params.id }
+  return { props: {id}};
 }
