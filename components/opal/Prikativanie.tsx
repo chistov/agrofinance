@@ -1,14 +1,17 @@
 import styles from "./OpalKultivaciya.module.scss";
 import React from "react";
+import {useRouter} from "next/router";
 
 const Podryv = () => {
+  const router = useRouter();
+
   return (
     <div className={styles.product_container}>
       <div className={styles.product_box}>
-        <a href="/ru/kembridzh-katki-vega-ii" className="product-item">
+        <a onClick={() => { router.push(`${router.asPath}/item/19`)}} className={styles.link}>
           <div className="product-item-image">
             <img data-lazy-type="img" data-img="/OPaLL/media/static-media/7bc7d92c-7439-4f21-bfd4-cb40e704f899@w400.png"
-                 src="/assets/7bc7d92c-7439-4f21-bfd4-cb40e704f899@w300.webp.png"/>
+                 alt="VEGA II" src="/assets/7bc7d92c-7439-4f21-bfd4-cb40e704f899@w300.webp.png"/>
           </div>
           <div className="product-item-text">
 

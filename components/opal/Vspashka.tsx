@@ -1,13 +1,16 @@
 import styles from "./OpalKultivaciya.module.scss";
 import React from "react";
+import {useRouter} from "next/router";
 
 const Vspashka = () => {
+  const router = useRouter();
+
   return (
       <div className={styles.product_container}>
         <div className={styles.product_box_vspashka}>
-          <a href="/ru/navesnye-oborotnye-plugi-jupiter-ii-120" className="product-item">
+          <a onClick={() => { router.push(`${router.asPath}/item/9`)}} className={styles.link}>
             <div className="product-item-image">
-              <img data-lazy-type="img"
+              <img data-lazy-type="img" alt="JUPITER II 120"
                    src="/assets/9835430e-6671-43bd-be3c-d1039bcaedce@w300.webp.png"/>
             </div>
             <div className="product-item-text">
@@ -23,9 +26,9 @@ const Vspashka = () => {
           </a>
         </div>
         <div className={styles.product_box_vspashka}>
-          <a href="/ru/apollo-i-140" className="product-item">
+          <a onClick={() => { router.push(`${router.asPath}/item/10`)}} className={styles.link}>
             <div className="product-item-image">
-              <img data-lazy-type="img"
+              <img data-lazy-type="img" alt="APOLLO I 140"
                    src="/assets/ae76e787-7bd0-4e22-9571-6b17ff6df2b6@w300.webp.png"/>
             </div>
             <div className="product-item-text">
@@ -41,9 +44,9 @@ const Vspashka = () => {
           </a>
         </div>
         <div className={styles.product_box_vspashka}>
-          <a href="/ru/apollo-i-140-v" className="product-item">
+          <a onClick={() => { router.push(`${router.asPath}/item/11`)}} className={styles.link}>
             <div className="product-item-image">
-              <img data-lazy-type="img"
+              <img data-lazy-type="img" alt="APOLLO I 140 V"
                    src="/assets/5790985a-ed3c-436c-9bba-f82bb98ef042@w300.webp.png"/>
             </div>
             <div className="product-item-text">
@@ -59,9 +62,9 @@ const Vspashka = () => {
           </a>
         </div>
         <div className={styles.product_box_vspashka}>
-          <a href="/ru/orion-180-1" className="product-item">
+          <a onClick={() => { router.push(`${router.asPath}/item/12`)}} className={styles.link}>
             <div className="product-item-image">
-              <img data-lazy-type="img"
+              <img data-lazy-type="img" alt="ORION I 180"
                    src="/assets/77d4fd4c-5b9a-4ae6-b3d1-b8e8255f7c63@w300.webp.png"/>
             </div>
             <div className="product-item-text">
@@ -78,9 +81,9 @@ const Vspashka = () => {
           </a>
         </div>
         <div className={styles.product_box_vspashka}>
-          <a href="/ru/izdeliya/orba/orion-ii-180-2" className="product-item">
+          <a onClick={() => { router.push(`${router.asPath}/item/13`)}} className={styles.link}>
             <div className="product-item-image">
-              <img data-lazy-type="img"
+              <img data-lazy-type="img" alt="ORION II 180"
                    src="/assets/e9ea40b1-d355-49e7-b589-ff638fb8175f@w300.png"/>
             </div>
             <div className="product-item-text">
@@ -96,9 +99,9 @@ const Vspashka = () => {
           </a>
         </div>
         <div className={styles.product_box_vspashka}>
-          <a href="/ru/izdeliya/orba/orion-ii-180-v" className="product-item">
+          <a onClick={() => { router.push(`${router.asPath}/item/14`)}} className={styles.link}>
             <div className="product-item-image">
-              <img data-lazy-type="img"
+              <img data-lazy-type="img" alt="ORION II 180 V"
                    src="/assets/3a6d9e5d-7cd4-449c-b79a-5145b9614711@w300.webp.png"/>
             </div>
             <div className="product-item-text">
@@ -114,9 +117,9 @@ const Vspashka = () => {
           </a>
         </div>
         <div className={styles.product_box_vspashka}>
-          <a href="/ru/izdeliya/orba/orion-ii-180-ol" className="product-item">
+          <a onClick={() => { router.push(`${router.asPath}/item/15`)}} className={styles.link}>
             <div className="product-item-image">
-              <img data-lazy-type="img"
+              <img data-lazy-type="img" alt="ORION II 180 OL"
                    src="/assets/219a1eeb-60e9-414f-b81a-11608288012d@w300.webp.png"/>
             </div>
             <div className="product-item-text">
@@ -132,9 +135,9 @@ const Vspashka = () => {
           </a>
         </div>
         <div className={styles.product_box_vspashka}>
-          <a href="/ru/izdeliya/orba/orion-ii-180-ol-v" className="product-item">
+          <a onClick={() => { router.push(`${router.asPath}/item/16`)}} className={styles.link}>
             <div className="product-item-image">
-              <img data-lazy-type="img"
+              <img data-lazy-type="img" alt="ORION II 180 OL V"
                    src="/assets/000f3743-d3fe-4fc8-be56-b036ccfef73a@w300.webp.png"/>
             </div>
             <div className="product-item-text">

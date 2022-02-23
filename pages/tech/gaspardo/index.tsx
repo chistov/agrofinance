@@ -33,3 +33,5 @@ const Gaspardo: NextPage = () => {
     </DefaultLayout>
   )
 }
+
+export default Gaspardo;
