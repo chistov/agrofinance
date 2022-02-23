@@ -33,3 +33,5 @@ const OpalAgri: NextPage = () => {
       </DefaultLayout>
   )
 }
+
+export default OpalAgri

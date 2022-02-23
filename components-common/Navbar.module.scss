@@ -1,7 +1,9 @@
+@import "styles/globals";
+
 .navbar {
   display: flex;
   align-items: center;
-  height: 90px;
+  height: $navbar-height;
   width: 100%;
 
   background-color: #f1f1f1;

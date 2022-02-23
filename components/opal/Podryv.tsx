@@ -1,13 +1,17 @@
 import styles from "./OpalKultivaciya.module.scss";
 import React from "react";
+import {useRouter} from "next/router";
 
 const Podryv = () => {
+  const router = useRouter();
+
   return (
       <div className={styles.product_container}>
         <div className={styles.product_box}>
-          <a href="/ru/glubokorykhlitel-hektor-i" className="product-item">
+          <a onClick={() => { router.push(`${router.asPath}/item/17`)}} className={styles.link}>
             <div className="product-item-image">
               <img data-lazy-type="img" src="/assets/3f20e7bd-49b1-43d6-9b48-511f3f2f88de@w300.webp.png"
+                   alt='Hector'
                    data-webp="/assets/3f20e7bd-49b1-43d6-9b48-511f3f2f88de@w400.webp"/>
             </div>
             <div className="product-item-text">
@@ -23,10 +27,10 @@ const Podryv = () => {
           </a>
         </div>
         <div className={styles.product_box}>
-          <a href="/ru/podryvani/hektor-i-uni" className="product-item">
+          <a onClick={() => { router.push(`${router.asPath}/item/18`)}} className={styles.link}>
             <div className="product-item-image">
               <img data-lazy-type="img" src="/assets/3f20e7bd-49b1-43d6-9b48-511f3f2f88de@w300.webp.png"
-                   data-webp="/assets/3f20e7bd-49b1-43d6-9b48-511f3f2f88de@w400.webp"/>
+                   alt="HEKTOR I" data-webp="/assets/3f20e7bd-49b1-43d6-9b48-511f3f2f88de@w400.webp"/>
             </div>
             <div className="product-item-text">
 
