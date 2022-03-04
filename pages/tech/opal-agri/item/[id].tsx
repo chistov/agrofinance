@@ -1,4 +1,3 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import Navbar from "../../../../components-common/Navbar";
 import styles from './Item.module.scss';
@@ -20,7 +19,6 @@ interface IJson {
 // @ts-ignore
 const OpalItem = ({id}) => {
   console.log('curr id: ', id);
-  const router = useRouter();
 
   const [currId, setCurrId] = useState(0);
   const [hdr, setHdr] = useState('');
@@ -39,26 +37,24 @@ const OpalItem = ({id}) => {
 
   useEffect(() => {
     // const { id } = router.query;
-    setCurrId(id ? +id : 0 );
+    // setCurrId(id ? +id : 0 );
     console.log('id: ', currId);
 
-    if(currId) {
-      json = require("/public/assets_item/" + currId + ".json");
-      setHdr(json.hdr);
-      setDescr(json.descr);
-      setUrl(json.url);
-      setThdr(json.thdr);
-      setTbody(json.tbody);
-      setPng(json.png);
+    json = require("/public/assets_item_opal/" + id + ".json");
+    setHdr(json.hdr);
+    setDescr(json.descr);
+    setUrl(json.url);
+    setThdr(json.thdr);
+    setTbody(json.tbody);
+    setPng(json.png);
 
-      setExtra(json.extra);
+    setExtra(json.extra);
 
-      console.log('urL: ', extra[0].url);
-      setExtraImg( extra[0].url );
+    console.log('urL: ', extra[0].url);
+    setExtraImg( extra[0].url );
 
-      setPdescr(json.p_descr);
-      setBase(json.base);
-    }
+    setPdescr(json.p_descr);
+    setBase(json.base);
 
   } );
 
@@ -80,7 +76,7 @@ const OpalItem = ({id}) => {
       <main className={styles.prod_descr}>
         <div className={styles.descr_wrap}>
           <div className={styles.descr}>{descr}</div>
-          <img className={styles.img_main} src={"/assets_item/" + png} alt={hdr}/>
+          <img className={styles.img_main} src={"/assets_item_opal/" + png} alt={hdr}/>
           <ol className={styles.ol}>{pDescr?.map((it, idx) => <li className={styles.li} key={idx}>{it}</li>)}</ol>
         </div>
         { url !== '' &&
@@ -101,7 +97,7 @@ const OpalItem = ({id}) => {
               {extra?.map(it => <li key={it.name}><a className={styles.extra_href} onClick={() => setExtraImg(it.url)}>{it.name}</a></li>)}
             </ul>
           </div>
-          <img className="" src={"/assets_item/" + extraImg} alt={extraImg}/>
+          <img className="" src={"/assets_item_opal/" + extraImg} alt={extraImg}/>
         </div>
 
         <div id="parameters" className="pux-container  pt-10">

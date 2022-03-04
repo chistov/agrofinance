@@ -22,6 +22,7 @@ const nextConfig = {
       '/tech/gaspardo': { page: '/tech/gaspardo' },
       // '/tech/opal-agri/item/': { page: '/tech/opal-agri/item/1' },
       '/tech/opal-agri/item/id': { page: '/tech/opal-agri/item/[id]' },
+      '/tech/gaspardo/item/id': { page: '/tech/gaspardo/item/[id]' },
     }
   },
   generateBuildId: async () => {
