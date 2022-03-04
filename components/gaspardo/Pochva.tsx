@@ -1,14 +1,16 @@
 import styles from "./Pochva.module.scss";
 import React from "react";
+import {useRouter} from "next/router";
 
 const Pochva = () => {
+  const router = useRouter();
   return (
     <> {/* Must be here! Global grid */ }
       <h2 className={styles.subcategory}>Вращающиеся фрезы</h2>
       <div className={styles.container}>
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/l/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/1`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -26,7 +28,7 @@ const Pochva = () => {
 
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/w/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/2`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -45,7 +47,7 @@ const Pochva = () => {
 
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/a/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/3`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -63,7 +65,7 @@ const Pochva = () => {
 
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/h/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/4`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -79,28 +81,9 @@ const Pochva = () => {
           </a>
         </div>
 
-
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/virat/ru_RU">
-            <div className="product">
-              <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-VIRATPRINCIPAL8.jpg" alt="VIRATPRINCIPAL8"/>
-
-              </div>
-              <div className="text">
-                <h2>VIRAT</h2>
-                <h3></h3>
-                <p>Working width: <span>125-145-165-185-205</span></p><p>Working depth: <span>22</span></p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/u/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/5`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -118,7 +101,7 @@ const Pochva = () => {
 
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/b/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/6`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -134,28 +117,9 @@ const Pochva = () => {
           </a>
         </div>
 
-
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/b&#32;super/ru_RU">
-            <div className="product">
-              <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-MBSUPERF.JPG" alt="MBSUPERF"/>
-
-              </div>
-              <div className="text">
-                <h2>B SUPER</h2>
-                <h3></h3>
-                <p>Working width: <span>160-185-210-235</span></p><p>Working depth: <span>27</span></p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/c/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/7`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -173,7 +137,7 @@ const Pochva = () => {
 
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/sc/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/8`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -192,7 +156,7 @@ const Pochva = () => {
 
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/g/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/9`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -211,7 +175,7 @@ const Pochva = () => {
 
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/puma/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/10`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -229,7 +193,7 @@ const Pochva = () => {
 
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/puma-cobra/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/11`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -245,29 +209,9 @@ const Pochva = () => {
           </a>
         </div>
 
-
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/pantera-l/ru_RU">
-            <div className="product">
-              <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-20180202terarever054.jpg" alt="20180202terarever054"/>
-
-              </div>
-              <div className="text">
-                <h2>PANTERA L</h2>
-                <h3></h3>
-                <p>Working width: <span>376-426-476</span></p><p>Working depth: <span>27</span></p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/pantera/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/12`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -282,32 +226,14 @@ const Pochva = () => {
             </div>
           </a>
         </div>
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/jane/ru_RU">
-            <div className="product">
-              <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-20160802-jane-19.jpg" alt="20160802 jane 19"/>
-
-              </div>
-              <div className="text">
-                <h2>JANE</h2>
-                <h3></h3>
-                <p>Working width: <span>428-478-528-578-608-628</span></p><p>Working depth: <span>29</span></p>
-              </div>
-            </div>
-          </a>
-        </div>
       </div>
-
 
       <h2 className={styles.subcategory}>Вращающиеся бороны</h2>
       <div className={styles.container}>
 
         <div className={styles.item}>
           <div className="corner top"></div>
+          {/*<a onClick={() => { router.push(`${router.asPath}/item/13`)}} className={styles.link}>*/}
           <a className="productLink" href="https://www2.maschio.com/catalog/product/delfino-dl/ru_RU">
             <div className="product">
               <div className="image">

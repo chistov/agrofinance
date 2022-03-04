@@ -1,0 +1,28 @@
+@import "styles/globals";
+
+.main {
+  padding: 0 0 60px 30px;
+}
+
+.overview {
+  display: flex;
+}
+
+.hdr {
+  @extend %hdr;
+  margin-top: calc(#{$navbar-height} + 15px);
+  margin-left: 30px;
+}
+
+.table {
+  width: 990px;
+  padding-bottom: 50px;
+
+  tr:nth-child(even){
+    background: #f0f0f0;
+  }
+
+  tr td {
+    text-align: center;
+  }
+}
