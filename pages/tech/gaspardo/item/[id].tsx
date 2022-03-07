@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Navbar from "../../../../components-common/Navbar";
 import {memo} from "react";
 import styles from './GItem.module.scss';
-import {useRouter} from "next/router";
 
 interface IJson {
   techHdrs: string[];
@@ -14,7 +13,6 @@ interface IJson {
 
 // @ts-ignore
 const GaspardoItem = memo(({id}) => {
-  const router = useRouter();
   console.log('curr id: ', id);
   let json = {} as IJson;
   json = require("/public/assets_item_gasp/" + id + ".json");
@@ -48,21 +46,17 @@ const GaspardoItem = memo(({id}) => {
               (() => {
                 const th = [];
                 th.push(thdr.map((it, idx) => {
-                  if (it.includes('png')) {
+                  if(it.includes('png')) {
                     return (
                       <th key={idx} colSpan={1} rowSpan={1} scope="col">
                         <div>
-                          {(() =>
-                              idx == 2 ? 'РАБОЧАЯ ШИРИНА' :
-                                idx == 3 ? 'ШИРИНА' :
-                                  idx == 4 ? 'РАБОЧАЯ ГРУБИНА' :
-                                    idx == 5 ? 'НОМЕР ЛЕЗВИЯ' : ''
-                          )}
+                          { idx == 2 ? 'РАБОЧАЯ ШИРИНА': idx == 3 ? 'ШИРИНА': idx == 4 ? 'РАБОЧАЯ ГРУБИНА': [5,6].includes(idx) ? 'НОМЕР ЛЕЗВИЯ': '' }
                         </div>
                         <img className={styles.img_main} src={"/assets_item_gasp/" + it} alt={'описание'}/>
                       </th>
                     )
-                  } else {
+                  }
+                  else {
                     return <th key={idx} colSpan={1} rowSpan={1} scope="col">{it}</th>
                   }
                 }))
@@ -117,7 +111,7 @@ export default GaspardoItem;
 export async function getStaticPaths() {
   // Call an external API endpoint to get posts
   // const res = await fetch('https://.../posts')
-  const ids = Array.from(Array(19).keys())
+  const ids = Array.from(Array(29).keys())
 
   // Get the paths we want to pre-render based on posts
   const paths = ids.map(id => ({
