@@ -111,7 +111,7 @@ export default GaspardoItem;
 export async function getStaticPaths() {
   // Call an external API endpoint to get posts
   // const res = await fetch('https://.../posts')
-  const ids = Array.from(Array(29).keys())
+  const ids = Array.from(Array(59).keys())
 
   // Get the paths we want to pre-render based on posts
   const paths = ids.map(id => ({
