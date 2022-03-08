@@ -435,26 +435,7 @@ const Pochva = () => {
 
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/jolly-scarico-posteriore/ru_RU">
-            <div className="product">
-              <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-48_0_jollypost.jpg" alt="48_0_jollypost.jpg"/>
-
-              </div>
-              <div className="text">
-                <h2>JOLLY</h2>
-                <h3></h3>
-                <p>Working width: <span>120-150-180-210</span></p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/furba/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/24`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -470,15 +451,12 @@ const Pochva = () => {
           </a>
         </div>
 
-
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/barbi/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/25`)}} className={styles.link}>
             <div className="product">
               <div className="image">
-
                 <img src="/assets_gaspardo/SetRatioSize300155-50_0_barbi.jpg" alt="50_0_barbi.jpg"/>
-
               </div>
               <div className="text">
                 <h2>BARBI</h2>
@@ -491,7 +469,7 @@ const Pochva = () => {
 
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/birba/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/26`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -509,7 +487,7 @@ const Pochva = () => {
 
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/brava/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/27`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -528,7 +506,7 @@ const Pochva = () => {
 
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/bella/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/28`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -546,7 +524,7 @@ const Pochva = () => {
 
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/corazza/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/29`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -565,7 +543,7 @@ const Pochva = () => {
 
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/tigre/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/30`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -581,101 +559,10 @@ const Pochva = () => {
           </a>
         </div>
 
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/giraffina/ru_RU">
-            <div className="product">
-              <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-Giraffina.jpg" alt="Giraffina"/>
-
-              </div>
-              <div className="text">
-                <h2>GIRAFFA S</h2>
-                <h3></h3>
-                <p>Working width: <span>120-140-160</span></p>
-              </div>
-            </div>
-          </a>
-        </div>
 
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/giraffetta/ru_RU">
-            <div className="product">
-              <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-57_0_giraffetta.jpg" alt="57_0_giraffetta.jpg"/>
-
-              </div>
-              <div className="text">
-                <h2>GIRAFFA M</h2>
-                <h3></h3>
-                <p>Working width: <span>120-140-160-180</span></p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/giraffa-l/ru_RU">
-            <div className="product">
-              <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-MGIRAFFAL.jpg" alt="MGIRAFFAL"/>
-
-              </div>
-              <div className="text">
-                <h2>GIRAFFA L</h2>
-                <h3></h3>
-                <p>Working width: <span>149-164-184</span></p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/giraffa/ru_RU">
-            <div className="product">
-              <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-58_0_giraffa.jpg" alt="58_0_giraffa.jpg"/>
-
-              </div>
-              <div className="text">
-                <h2>GIRAFFA XL</h2>
-                <h3></h3>
-                <p>Working width: <span>157-190-212</span></p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/giraffona/ru_RU">
-            <div className="product">
-              <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-59_0_giraffona.jpg" alt="59_0_giraffona.jpg"/>
-
-              </div>
-              <div className="text">
-                <h2>GIRAFFA XXL</h2>
-                <h3></h3>
-                <p>Working width: <span>210-226-257</span></p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/bisonte/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/31`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -693,25 +580,7 @@ const Pochva = () => {
 
 
         <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/bufalo/ru_RU">
-            <div className="product">
-              <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-bufalo.jpg" alt="bufalo"/>
-
-              </div>
-              <div className="text">
-                <h2>BUFALO</h2>
-                <p>Working width: <span>250-280-310</span></p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/chiara/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/32`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -727,15 +596,11 @@ const Pochva = () => {
           </a>
         </div>
 
-
         <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/tornado/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/33`)}} className={styles.link}>
             <div className="product">
               <div className="image">
-
                 <img src="/assets_gaspardo/SetRatioSize300155-62_0_tornado.jpg" alt="62_0_tornado.jpg"/>
-
               </div>
               <div className="text">
                 <h2>TORNADO</h2>
@@ -746,15 +611,11 @@ const Pochva = () => {
           </a>
         </div>
 
-
         <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/leopard/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/34`)}} className={styles.link}>
             <div className="product">
               <div className="image">
-
                 <img src="/assets_gaspardo/SetRatioSize300155-7375_0_leopard.jpg" alt="7375_0_leopard.jpg"/>
-
               </div>
               <div className="text">
                 <h2>LEOPARD</h2>
@@ -766,13 +627,10 @@ const Pochva = () => {
         </div>
 
         <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/gemella/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/35`)}} className={styles.link}>
             <div className="product">
               <div className="image">
-
                 <img src="/assets_gaspardo/SetRatioSize300155-8454_0_gemella.jpg" alt="8454_0_gemella.jpg"/>
-
               </div>
               <div className="text">
                 <h2>GEMELLA</h2>
@@ -782,169 +640,16 @@ const Pochva = () => {
             </div>
           </a>
         </div>
+
       </div>
-
-      <h2 className={styles.subcategory}>Косилки для коммунальных работ</h2>
-      <div className={styles.container}>
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/margherita/ru_RU">
-            <div className="product">
-              <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-20130506margheritas3.jpg" alt="20130506margheritas3"/>
-
-              </div>
-              <div className="text">
-                <h2>MARGHERITA</h2>
-              </div>
-            </div>
-          </a>
-        </div>
-
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/cristina/ru_RU">
-            <div className="product">
-              <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-20081203cristinas3.jpg" alt="20081203cristinas3"/>
-
-              </div>
-              <div className="text">
-                <h2>CRISTINA</h2>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/martina/ru_RU">
-            <div className="product">
-              <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-martina-425x280.JPG" alt="martina 425x280"/>
-
-              </div>
-              <div className="text">
-                <h2>MARTINA</h2>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/palma/ru_RU">
-            <div className="product">
-              <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-palma.jpg" alt="palma"/>
-
-              </div>
-              <div className="text">
-                <h2>PALMA</h2>
-                <h3></h3>
-
-              </div>
-            </div>
-          </a>
-        </div>
-
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/camilla-2016/ru_RU">
-            <div className="product">
-              <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-camilla2016.png" alt="camilla2016"/>
-
-              </div>
-              <div className="text">
-                <h2>CAMILLA</h2>
-                <h3></h3>
-
-              </div>
-            </div>
-          </a>
-        </div>
-
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/gaia/ru_RU">
-            <div className="product">
-              <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-13675_0_gaia.jpg" alt="13675_0_gaia.jpg"/>
-
-              </div>
-              <div className="text">
-                <h2>GAIA</h2>
-                <h3></h3>
-
-              </div>
-            </div>
-          </a>
-        </div>
-
-
-
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/katia2016/ru_RU">
-            <div className="product">
-              <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-20140521katias2.jpg" alt="20140521katias2"/>
-
-              </div>
-              <div className="text">
-                <h2>KATIA</h2>
-                <h3></h3>
-
-              </div>
-            </div>
-          </a>
-        </div>
-
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/lara/ru_RU">
-            <div className="product">
-              <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-MLARAF2.jpg" alt="MLARAF2"/>
-
-              </div>
-              <div className="text">
-                <h2>LARA</h2>
-                <h3></h3>
-
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      {/* end sub cat */
-      }
 
 
       <h2 className={styles.subcategory}>Глубокорыхлители</h2>
       <div className={styles.container}>
-
         <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/pinocchio/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/36`)}} className={styles.link}>
             <div className="product">
               <div className="image">
-
                 <img src="/assets_gaspardo/SetRatioSize300155-MPINOCCHIO-CSSF5.jpg" alt="MPINOCCHIO CSSF5"/>
 
               </div>
@@ -959,8 +664,7 @@ const Pochva = () => {
 
 
         <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/attila/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/37`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -969,7 +673,6 @@ const Pochva = () => {
               </div>
               <div className="text">
                 <h2>ATTILA</h2>
-                <h3></h3>
                 <p>Working width: <span>250-300</span></p><p>Working depth: <span>50</span></p>
               </div>
             </div>
@@ -979,7 +682,7 @@ const Pochva = () => {
 
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/attila-idropneumatico/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/38`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -1000,8 +703,7 @@ const Pochva = () => {
 
 
         <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/artiglio-s/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/39`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -1020,14 +722,11 @@ const Pochva = () => {
 
 
         <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/artiglio-idropneumatico/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/40`)}} className={styles.link}>
             <div className="product">
               <div className="image">
-
                 <img src="/assets_gaspardo/SetRatioSize300155-20160303artigliohydropneumatics2.jpg"
                      alt="20160303artigliohydropneumatics2"/>
-
               </div>
               <div className="text">
                 <h2>ARTIGLIO HYDRO</h2>
@@ -1042,7 +741,7 @@ const Pochva = () => {
 
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/artiglio-sxl/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/41`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -1051,7 +750,6 @@ const Pochva = () => {
               </div>
               <div className="text">
                 <h2>ARTIGLIO MAGNUM</h2>
-                <h3></h3>
                 <p>Working width: <span>250-300-400</span></p><p>Working depth: <span>70</span></p>
               </div>
             </div>
@@ -1062,30 +760,10 @@ const Pochva = () => {
 
 
 
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/artiglio-folding/ru_RU">
-            <div className="product">
-              <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-ARTIGLIO-R17619500-00-SHARED-REV00-R02.1533.png"
-                     alt="ARTIGLIO R17619500 00 SHARED REV00 R02.1533"/>
-
-              </div>
-              <div className="text">
-                <h2>ARTIGLIO FOLDING</h2>
-                <h3></h3>
-                <p>Working width: <span>410-500</span></p><p>Working depth: <span>55</span></p>
-              </div>
-            </div>
-          </a>
-
-        </div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/diablo/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/42`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -1094,7 +772,6 @@ const Pochva = () => {
               </div>
               <div className="text">
                 <h2>DIABLO</h2>
-                <h3></h3>
                 <p>Working depth: <span>45</span></p>
               </div>
             </div>
@@ -1110,13 +787,10 @@ const Pochva = () => {
       <div className={styles.container}>
 
         <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/ufo-c/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/43`)}} className={styles.link}>
             <div className="product">
               <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-ufocpreview.jpg" alt="ufocpreview"/>
-
+                <img src="/assets_gaspardo/SetRatioSize300155-ufocpreview.jpg" alt="MPRESTOSDFIXF"/>
               </div>
               <div className="text">
                 <h2>UFO TZAR</h2>
@@ -1125,13 +799,10 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-
         </div>
 
-
         <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/veloce/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/44`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -1145,13 +816,11 @@ const Pochva = () => {
               </div>
             </div>
           </a>
-
         </div>
 
 
         <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/veloce-pieghevole-portato/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/45`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -1160,7 +829,6 @@ const Pochva = () => {
               </div>
               <div className="text">
                 <h2>VELOCE FOLDING</h2>
-                <h3></h3>
                 <p>Working width: <span>400-500-600</span></p><p>Working depth: <span>3-10</span></p>
               </div>
             </div>
@@ -1172,9 +840,7 @@ const Pochva = () => {
 
 
         <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink"
-             href="https://www2.maschio.com/catalog/product/veloce-pieghevole-semi-portato/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/46`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -1184,7 +850,6 @@ const Pochva = () => {
               </div>
               <div className="text">
                 <h2>VELOCE SEMI-MOUNTED</h2>
-                <h3></h3>
                 <p>Working width: <span>500-600-700</span></p><p>Working depth: <span>3-10</span></p>
               </div>
             </div>
@@ -1194,8 +859,7 @@ const Pochva = () => {
 
 
         <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/ufo-usa/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/47`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -1204,7 +868,6 @@ const Pochva = () => {
               </div>
               <div className="text">
                 <h2>UFO</h2>
-                <h3></h3>
                 <p>: <span>10-11½-13-8</span></p>
               </div>
             </div>
@@ -1212,38 +875,14 @@ const Pochva = () => {
 
         </div>
 
-
         <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/admiral-usa/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/48`)}} className={styles.link}>
             <div className="product">
               <div className="image">
-
-                <img src="/assets_gaspardo/SetRatioSize300155-MADMIRALF3.jpg" alt="MADMIRALF3"/>
-
-              </div>
-              <div className="text">
-                <h2>ADMIRAL</h2>
-                <h3></h3>
-                <p>: <span>28</span></p>
-              </div>
-            </div>
-          </a>
-
-        </div>
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/admiral/ru_RU">
-            <div className="product">
-              <div className="image">
-
                 <img src="/assets_gaspardo/SetRatioSize300155-MADMIRALF15.jpg" alt="MADMIRALF15"/>
-
               </div>
               <div className="text">
                 <h2>ADMIRAL</h2>
-                <h3></h3>
                 <p>Working width: <span>850</span></p><p>Working depth: <span>8-15</span></p>
               </div>
             </div>
@@ -1257,10 +896,8 @@ const Pochva = () => {
 
       <h2 className={styles.subcategory}>Культиваторы для предпосевной подготовки почвы</h2>
       <div className={styles.container}>
-
         <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/grator/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/49`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -1269,7 +906,6 @@ const Pochva = () => {
               </div>
               <div className="text">
                 <h2>GRATOR</h2>
-                <h3></h3>
                 <p>Working depth: <span>10</span></p>
               </div>
             </div>
@@ -1279,8 +915,7 @@ const Pochva = () => {
 
 
         <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/sandokan/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/50`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
