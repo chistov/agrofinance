@@ -1,7 +1,9 @@
 import styles from "./Posev.module.scss";
 import React from "react";
+import {useRouter} from "next/router";
 
 const Posev = () => {
+  const router = useRouter();
 
   return (
     <>
@@ -9,60 +11,21 @@ const Posev = () => {
       <div className={styles.container}>
 
         <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/chrono-306/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/55`)}} className={styles.link}>
             <div className="product">
               <div className="image">
-                <img src="/assets_gaspardo/SetRatioSize300155-GCHRONO2.jpg" alt="GCHRONO2"/>
-              </div>
-              <div className="text">
-                <h2>CHRONO 306</h2>
-              </div>
-            </div>
-          </a>
-          <div className="corner"></div>
-        </div>
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/chrono-708/ru_RU">
-            <div className="product">
-              <div className="image">
-
                 <img src="/assets_gaspardo/SetRatioSize300155-GCHRONO708.jpg" alt="GCHRONO708"/>
-
               </div>
               <div className="text">
                 <h2>CHRONO 708</h2>
-                <h3></h3>
-
               </div>
             </div>
           </a>
-          <div className="corner"></div>
         </div>
       </div>
 
       <h2 className={styles.subcategory}>Пневматические сеялки точного высева</h2>
       <div className={styles.container}>
-
-        <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/renata-r/ru_RU">
-            <div className="product">
-              <div className="image">
-                <img src="/assets_gaspardo/SetRatioSize300155-GRENATAAPERTA3.jpg" alt="GRENATAAPERTA3"/>
-              </div>
-              <div className="text">
-                <h2>RENATA - RENATA ISOTRONIC</h2>
-                <h3></h3>
-
-              </div>
-            </div>
-          </a>
-          <div className="corner"></div>
-        </div>
-
 
         <div className={styles.item}>
           <div className="corner top"></div>

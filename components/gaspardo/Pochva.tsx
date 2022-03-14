@@ -941,7 +941,7 @@ const Pochva = () => {
 
         <div className={styles.item}>
           <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/terremoto-3/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/51`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -950,7 +950,6 @@ const Pochva = () => {
               </div>
               <div className="text">
                 <h2>TERREMOTO 3</h2>
-                <h3></h3>
                 <p>Working depth: <span>25</span></p>
               </div>
             </div>
@@ -960,8 +959,7 @@ const Pochva = () => {
 
 
         <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/dracula/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/52`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -970,7 +968,6 @@ const Pochva = () => {
               </div>
               <div className="text">
                 <h2>DRACULA HYDRO</h2>
-                <h3></h3>
                 <p>Working width: <span>400-600</span></p>
               </div>
             </div>
@@ -986,8 +983,7 @@ const Pochva = () => {
       <div className={styles.container}>
 
         <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/unico/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/53`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -996,8 +992,6 @@ const Pochva = () => {
               </div>
               <div className="text">
                 <h2>UNICO</h2>
-                <h3></h3>
-
               </div>
             </div>
           </a>
@@ -1012,8 +1006,7 @@ const Pochva = () => {
       <div className={styles.container}>
 
         <div className={styles.item}>
-          <div className="corner top"></div>
-          <a className="productLink" href="https://www2.maschio.com/catalog/product/mirco/ru_RU">
+          <a onClick={() => { router.push(`${router.asPath}/item/54`)}} className={styles.link}>
             <div className="product">
               <div className="image">
 
@@ -1022,8 +1015,6 @@ const Pochva = () => {
               </div>
               <div className="text">
                 <h2>MIRCO</h2>
-                <h3></h3>
-
               </div>
             </div>
           </a>

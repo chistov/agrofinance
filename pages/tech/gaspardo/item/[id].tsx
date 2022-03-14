@@ -9,16 +9,19 @@ interface IJson {
   std: string[];
   access: string[];
   overview: string;
+  picts: string[];
 }
 
 // @ts-ignore
-const GaspardoItem = memo(({id}) => {
+const GaspardoItem = ({id}) => {
   console.log('curr id: ', id);
   let json = {} as IJson;
   json = require("/public/assets_item_gasp/" + id + ".json");
-  console.log('thdrs: ', json);
+  // console.log('thdrs: ', json);
   const thdr = json.techHdrs;
   const jpg = id + '.jpg';
+  const picts = json.picts;
+  console.log('picts: ', picts);
 
   const maxIdx = 10;
 
@@ -35,8 +38,23 @@ const GaspardoItem = memo(({id}) => {
       <main className={styles.main}>
         <div className={styles.overview}>
           <img className={styles.img_main} src={"/assets_item_gasp/" + jpg} alt={'описание'}/>
-          <div>{json.overview}</div>
+          <div className={styles.overview_txt}>{json.overview}</div>
         </div>
+
+        {
+          picts.length &&
+          (() => {
+            return (
+              <div className={styles.picts}>
+                <h4>Фото</h4>
+                <div className={styles.preview_wrap}>
+                  {picts.map((p, idx) =>
+                    <img key={p} className={styles.img_preview} src={"/assets_item_gasp/" + p} alt={p}/> )}
+                </div>
+              </div>
+            )
+          })()
+        }
 
         <h4>Техническая информация</h4>
         <table className={styles.table} cellPadding="1" cellSpacing="1">
@@ -104,14 +122,14 @@ const GaspardoItem = memo(({id}) => {
       </main>
     </div>
   )
-})
+}
 
 export default GaspardoItem;
 
 export async function getStaticPaths() {
   // Call an external API endpoint to get posts
   // const res = await fetch('https://.../posts')
-  const ids = Array.from(Array(59).keys())
+  const ids = Array.from(Array(75).keys())
 
   // Get the paths we want to pre-render based on posts
   const paths = ids.map(id => ({
