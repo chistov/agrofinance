@@ -19,7 +19,7 @@
 }
 
 .picts {
-  padding: 5px 20px 5px 0px;
+  margin: 20px 0;
 }
 
 .table {
@@ -43,8 +43,5 @@
 .img_preview {
   width: 520px;
   height: 390px;
-}
-
-.img_preview:nth-child(n):not(:first-child) {
-  margin-left: 20px;
+  padding: 5px 20px 5px 0px;
 }
