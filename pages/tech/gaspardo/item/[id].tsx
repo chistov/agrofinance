@@ -14,14 +14,12 @@ interface IJson {
 
 // @ts-ignore
 const GaspardoItem = ({id}) => {
-  console.log('curr id: ', id);
   let json = {} as IJson;
   json = require("/public/assets_item_gasp/" + id + ".json");
   // console.log('thdrs: ', json);
   const thdr = json.techHdrs;
   const jpg = id + '.jpg';
   const picts = json.picts;
-  console.log('picts: ', picts);
 
   const maxIdx = 10;
 

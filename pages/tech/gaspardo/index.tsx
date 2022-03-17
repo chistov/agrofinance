@@ -1,5 +1,6 @@
 //@ts-nocheck
 import {NextPage} from "next";
+import cookie from "js-cookie";
 import DefaultLayout from "../../../components-common/defaultLayout";
 import React, {useState} from "react";
 import Aside from "../../../components-common/Aside";
@@ -8,14 +9,16 @@ import Posev from "../../../components/gaspardo/Posev";
 import Zagotovka from "../../../components/gaspardo/Zagotovka";
 import Urozhay from "../../../components/gaspardo/Urozhay";
 
-const Gaspardo: NextPage = () => {
-  let [idx, setIdx] = useState(0);
+const Gaspardo: NextPage = ({navIdx}) => {
+  let [idx, setIdx] = useState(navIdx);
 
   const changeMenuItem = (curr: number) => {
     console.log('cb: ', curr);
     setIdx(curr);
+    cookie.set('navIdx', curr);
     window.scrollTo({top: 0});
   }
+
   return (
     <DefaultLayout>
       <DefaultLayout.Header/>
@@ -35,3 +38,7 @@ const Gaspardo: NextPage = () => {
 }
 
 export default Gaspardo;
+
+export function getServerSideProps({req, res}) {
+  return { props: {navIdx: req.cookies.navIdx || 0}}
+}
