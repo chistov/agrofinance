@@ -1,5 +1,5 @@
 //@ts-nocheck
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {NextPage} from "next";
 import Kultivaciya from "../../../components/opal/kultivaciya";
 import DefaultLayout from "../../../components-common/defaultLayout";
@@ -9,13 +9,19 @@ import Podryv from "../../../components/opal/Podryv";
 import Prikativanie from "../../../components/opal/Prikativanie";
 
 const OpalAgri: NextPage = () => {
-  let [idx, setIdx] = useState(0);
+  let [idx, setIdx] = useState();
 
   const changeMenuItem = (curr:number) => {
-    console.log('cb: ', curr);
     setIdx(curr);
+    localStorage.setItem('idx_opal', curr)
     window.scrollTo({top: 0});
   }
+
+  useEffect(() => {
+    // Perform localStorage action
+    const item = localStorage.getItem('idx_opal') || 0;
+    setIdx(item);
+  }, [])
 
   return (
       <DefaultLayout>

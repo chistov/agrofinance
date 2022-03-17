@@ -2,22 +2,27 @@
 import {NextPage} from "next";
 import cookie from "js-cookie";
 import DefaultLayout from "../../../components-common/defaultLayout";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Aside from "../../../components-common/Aside";
 import Pochva from "../../../components/gaspardo/Pochva";
 import Posev from "../../../components/gaspardo/Posev";
 import Zagotovka from "../../../components/gaspardo/Zagotovka";
 import Urozhay from "../../../components/gaspardo/Urozhay";
 
-const Gaspardo: NextPage = ({navIdx}) => {
-  let [idx, setIdx] = useState(navIdx);
+const Gaspardo: NextPage = () => {
+  let [idx, setIdx] = useState();
 
   const changeMenuItem = (curr: number) => {
-    console.log('cb: ', curr);
     setIdx(curr);
-    cookie.set('navIdx', curr);
+    localStorage.setItem('idx', curr)
     window.scrollTo({top: 0});
   }
+
+  useEffect(() => {
+    // Perform localStorage action
+    const item = localStorage.getItem('idx') || 0;
+    setIdx(item);
+  }, [])
 
   return (
     <DefaultLayout>
@@ -38,7 +43,3 @@ const Gaspardo: NextPage = ({navIdx}) => {
 }
 
 export default Gaspardo;
-
-export function getServerSideProps({req, res}) {
-  return { props: {navIdx: req.cookies.navIdx || 0}}
-}
