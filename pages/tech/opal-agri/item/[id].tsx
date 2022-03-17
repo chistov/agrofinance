@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import Navbar from "../../../../components-common/Navbar";
 import styles from './Item.module.scss';
-import {useEffect, useState} from "react";
-import {useRouter} from "next/router";
+import React, {useEffect, useState} from "react";
 
 interface IJson {
   hdr: string;
@@ -58,6 +57,25 @@ const OpalItem = ({id}) => {
 
   } );
 
+  const toggle = (ev: React.MouseEvent<HTMLAnchorElement>, url: string) => {
+    let el: HTMLElement | null = null;
+    const len = extra.length;
+    for(let i = 0; i < len; ++i) {
+      if (el = document.querySelector('#id' + i)) {
+        el.style.backgroundColor = '#f6f6f6';
+        el.style.color = 'black';
+      }
+    }
+
+    if(ev !== null) {
+      //@ts-ignore
+      ev.target.style.backgroundColor = 'red';
+      //@ts-ignore
+      ev.target.style.color = 'white';
+    }
+    setExtraImg(url);
+  }
+
   useEffect(() => {
     setExtraImg(extraImg);
 
@@ -94,7 +112,16 @@ const OpalItem = ({id}) => {
           <div>
             <h4 className={styles.h4base}>Дополнительная комплектация</h4>
             <ul>
-              {extra?.map(it => <li key={it.name}><a className={styles.extra_href} onClick={() => setExtraImg(it.url)}>{it.name}</a></li>)}
+              {
+                extra?.map(
+                  (it, idx) =>
+                    <li key={it.name}>
+                      <a id={"id" + idx}
+                         className={styles.extra_href}
+                         onClick={(e) => toggle(e, it.url)}>{it.name}
+                      </a>
+                    </li>)
+              }
             </ul>
           </div>
           <img className="" src={"/assets_item_opal/" + extraImg} alt={extraImg}/>
