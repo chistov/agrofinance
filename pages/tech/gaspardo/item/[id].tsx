@@ -66,7 +66,7 @@ const GaspardoItem = ({id}) => {
                     return (
                       <th key={idx} colSpan={1} rowSpan={1} scope="col">
                         <div>
-                          { idx == 2 ? 'РАБОЧАЯ ШИРИНА': idx == 3 ? 'ШИРИНА': idx == 4 ? 'РАБОЧАЯ ГРУБИНА': [5,6].includes(idx) ? 'НОМЕР ЛЕЗВИЯ': '' }
+                          { idx == 2 ? 'РАБОЧАЯ ШИРИНА': idx == 3 ? 'ШИРИНА': idx == 4 ? 'РАБОЧАЯ ГЛУБИНА': [5,6].includes(idx) ? 'НОМЕР ЛЕЗВИЯ': '' }
                         </div>
                         <img className={styles.img_main} src={"/assets_item_gasp/" + it} alt={'описание'}/>
                       </th>
