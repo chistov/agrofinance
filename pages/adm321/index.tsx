@@ -21,22 +21,58 @@ const Admin = ({data}) => {
   const onsubmit = () => {
     fetch('/api/admin/add-card', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      // headers: { 'content-type': 'multipart/form-data' },
+      // headers: {
+      //   'Content-Type': 'application/json',
+      // },
       body: JSON.stringify({
         cmd: 'select * from'
       }),
     })
   }
 
-  /* Тут проверка JWT */
+
+  let hdr = '';
+  let body = '';
+
+  const handleChange = (e:any) => {
+    let formData = new FormData();
+    // formData.append("data", JSON.stringify(content));
+    console.log('e: ', e);
+    if(e.target.files && e.target.files[0]) {
+      console.log('file found', e.target.files[0])
+      formData.append("profile_picture", e.target.files[0]);
+      console.log('f: ', formData);
+      console.log('hdr: ', hdr);
+      console.log('body: ', body);
+      fetch('/api/admin/add-card', {
+        method: 'POST',
+        // headers: {
+        //   'Content-Type': 'application/json',
+        // },
+        body: formData
+      })
+        .then(res => console.log('resp: ', res))
+    }
+    // axios.put("/api/update", formData).then(console.log).catch(console.log);
+  };
+
   return (
-    <div>
-      <form onSubmit={onsubmit}>
-        <div>User: {data.user}</div>
-        <input/>
-      </form>
+
+    <div className="container mt-3 mt-md-5">
+      <div className="row d-flex justify-content-center">
+        <div className="col-6">
+          {/*<form onSubmit={onsubmit}>*/}
+          <form>
+            <div>Заголовок:</div>
+            <input value={hdr}/>
+            <div>Основной блок текста:</div>
+            <input value={body}/>
+            <div>Выберите фото:</div>
+            <input accept="*" type="file" onChange={handleChange} />
+          </form>
+        </div>
+      </div>
     </div>
   )
 
