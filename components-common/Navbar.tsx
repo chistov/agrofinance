@@ -52,7 +52,15 @@ const Navbar = () => {
             <a onClick={() => router.push('/tech/gaspardo')}>Gaspardo</a>
           </div>
         </div>
-        <a onClick={() => router.push('/zapch')} className={styles.ml15} href="#">ЗАПЧАСТИ</a>
+
+        <div className={styles.dropdown + ' ' + styles.ml15}>
+          <a onClick={() => router.push('/spare-parts')} className={styles.ml15} href="#">ЗАПЧАСТИ</a>
+          <div className={styles.dropdown_content}>
+            <a onClick={() => router.push('/spare-parts/maschio')}>Maschio</a>
+            <a onClick={() => router.push('/spare-parts/pwgroup')}>PWGroup</a>
+          </div>
+        </div>
+
         <a onClick={() => router.push('/service')} className={styles.ml15} href="#">СЕРВИС</a>
         <a onClick={() => router.push('/contacts')} className={styles.ml15} href="#">КОНТАКТЫ</a>
       </div>
