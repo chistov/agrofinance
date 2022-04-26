@@ -2,6 +2,7 @@ import { IncomingForm } from "formidable";
 import middleware from '../../../middleware/middleware'
 import nextConnect from 'next-connect'
 import * as fs from "fs";
+import execQuery from "../../../db";
 
 const handler = nextConnect()
 handler.use(middleware)
@@ -10,15 +11,27 @@ handler.use(middleware)
 handler.post(async (req, res) => {
   console.log('body: ', req.body)
   console.log('req files: ', req.files)
+  const brand = req.body.brand[0];
 
-  const saveFile = (name: string, img: any) => fs.writeFileSync(`imgs/${name}`, img);
+  // const saveFile = (name: string, img: any) => fs.writeFileSync(`imgs/${name}`, img);
+  const insert = `INSERT INTO ${brand} (header, body) VALUES('${req.body.hdr[0]}', '${req.body.body[0]}') ;`
+  console.log('ins: ', insert);
+  const result = await execQuery(insert, []);
+  const idx = result.insertId;
+  console.log('idx: ', idx);
 
-  const img = fs.readFileSync(req.files.profile_picture[0].path )
-  fs.writeFile('imgs/1.txt', img, function(err) {
+  const filePath = req.files.picture[0].path;
+  const ext = filePath.substring(filePath.lastIndexOf('.'))
+  console.log('ext: ', ext);
+  const img = fs.readFileSync(filePath);
+  const path = `/spare-parts/${brand}/${idx}${ext}`; // путь для img src страницы запчастей
+  fs.writeFile('public' + path, img, function(err) {
     if (err) return console.error(err);
     console.log('success');
   });
 
+  const update = `UPDATE ${brand} SET path='${path}' WHERE id=${idx}`;
+  await execQuery(update, []);
 
   //...
 })

@@ -1,7 +1,10 @@
 import { useRouter } from 'next/router';
 import {getSession, useSession} from "next-auth/react";
 import execQuery from '../../db/index';
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
+// import { Form } from 'multiparty';
+import "bootstrap/dist/css/bootstrap.css";
+import { Form } from "react-bootstrap";
 
 // @ts-ignore
 const Admin = ({data}) => {
@@ -32,8 +35,16 @@ const Admin = ({data}) => {
   }
 
 
-  let hdr = '';
-  let body = '';
+  const [hdr, setHdr] = useState('');
+  const [body, setBody] = useState('');
+  const [brand, setBrand] = useState('');
+
+  const handleText = (key: string, newVal: string) => {
+    switch (key) {
+      case 'hdr': setHdr(newVal); break;
+      case 'body': setBody(newVal); break;
+    }
+  }
 
   const handleChange = (e:any) => {
     let formData = new FormData();
@@ -41,7 +52,10 @@ const Admin = ({data}) => {
     console.log('e: ', e);
     if(e.target.files && e.target.files[0]) {
       console.log('file found', e.target.files[0])
-      formData.append("profile_picture", e.target.files[0]);
+      formData.append("picture", e.target.files[0]);
+      formData.append('brand', brand);
+      formData.append('hdr', hdr);
+      formData.append('body', body);
       console.log('f: ', formData);
       console.log('hdr: ', hdr);
       console.log('body: ', body);
@@ -65,9 +79,15 @@ const Admin = ({data}) => {
           {/*<form onSubmit={onsubmit}>*/}
           <form>
             <div>Заголовок:</div>
-            <input value={hdr}/>
+            <input value={hdr} onChange={(val) => handleText('hdr', val.target.value)}/>
+            <div>Брэнд:</div>
+            <Form.Select aria-label="Default select example" onChange={(val) => setBrand(val.target.value)}>
+              <option>Выбрать из списка:</option>
+              <option value="pwgroup">PWGroup</option>
+              <option value="maschio">Maschio</option>
+            </Form.Select>
             <div>Основной блок текста:</div>
-            <input value={body}/>
+            <input value={body} onChange={(val) => handleText('body', val.target.value)}/>
             <div>Выберите фото:</div>
             <input accept="*" type="file" onChange={handleChange} />
           </form>
