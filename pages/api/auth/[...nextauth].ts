@@ -1,5 +1,6 @@
 import CredentialsProvider from "next-auth/providers/credentials"
 import NextAuth from "next-auth";
+import execQuery from "../../../db";
 
 export default NextAuth({
   providers: [
@@ -12,10 +13,12 @@ export default NextAuth({
         password: {  label: "Password", type: "password" }
       },
       // async authorize(credentials, req) {
-      authorize: (credentials) => {
+      authorize: async (credentials) => {
 
         // db look up
-        if(credentials?.username == 'test' && credentials?.password == '12345') {
+        const [creds] = await execQuery("select * from `users`;", []);
+        console.log('user: ', creds);
+        if(credentials?.username == creds.user && credentials?.password == creds.pwd) {
           console.log('inside');
           return {
             id: 1,

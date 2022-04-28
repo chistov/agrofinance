@@ -1,3 +1,5 @@
+@import "styles/globals";
+
 .subcategory {
   display: inline-block;
   font-size: 30px;
@@ -8,9 +10,41 @@
 .header {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding-bottom: 40px;
 }
 
 .ml30 {
   margin-left: 30px;
+  width: 130px;
+}
+
+.cards {
+  row-gap: 50px;
+}
+
+.adm_form {
+
+  .hdr {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 24px;
+  }
+
+  .hdr:not(:first-child) {
+    margin-top: 35px;
+  }
+
+  .hdr_input {
+    width: 100%;
+  }
+
+  .textarea {
+    width: 100%;
+    min-height: 300px;
+    max-height: 900px;
+  }
+}
+
+.wrapper {
+  margin-top: calc(#{$navbar-height} + 15px);
 }
