@@ -7,7 +7,9 @@ middleware.use(async (req, res, next) => {
   const form = new multiparty.Form()
 
   await form.parse(req, function (err, fields, files) {
+    // @ts-ignore
     req.body = fields
+    // @ts-ignore
     req.files = files
     console.log('mid files: ', files);
     console.log('mid body: ', fields);

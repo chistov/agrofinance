@@ -1,3 +1,5 @@
+import {useSession} from "next-auth/react";
+import Router from "next/router";
 import "bootstrap/dist/css/bootstrap.css";
 import {Image} from "react-bootstrap";
 import execQuery from "../../../db";
@@ -6,11 +8,30 @@ import React from "react";
 import styles from "../../../styles/Contacts.module.scss";
 import common from "../../../styles/Common.module.scss";
 
+
 interface Resp {
   cards: Array<{id: number, hdr: string, body: string, path: string}>
 }
 
 const Maschio = ({cards}: Resp) => {
+  const {status} = useSession();
+
+  const rm = (id: number) => {
+    console.log('rm id: ', id);
+    fetch('/api/admin/rm-card', {
+      method: 'POST',
+      body: JSON.stringify({
+        brand: 'maschio',
+        id: id
+      })
+    })
+      .then(res => {
+        if(res.status == 200) {
+          Router.reload();
+        }
+        console.log('resp: ', res)
+      })
+  }
 
   return (
     <div>
@@ -36,7 +57,8 @@ const Maschio = ({cards}: Resp) => {
                              alt="Card image cap"/>
                       <div className="card-body">
                         <h5 className="card-title">{c.hdr}</h5>
-                        <p className="card-text">{c.body}</p>
+                        <pre className="card-text">{c.body}</pre>
+                        { status == 'authenticated' ? <button className="btn btn-secondary" onClick={() => rm(c.id)}>Удалить</button> : null }
                       </div>
                     </div>
                   </div>
