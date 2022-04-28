@@ -2,9 +2,11 @@ import Image from "next/image";
 import styles from './Navbar.module.scss'
 import {useRouter} from "next/router";
 import {useEffect} from "react";
+import {useSession} from "next-auth/react";
 
 const Navbar = () => {
   const router = useRouter();
+  const {status} = useSession();
 
   useEffect(() => { // document not available outside useEffect
     window.onscroll = function () {
@@ -63,7 +65,9 @@ const Navbar = () => {
 
         <a onClick={() => router.push('/service')} className={styles.ml15} href="#">СЕРВИС</a>
         <a onClick={() => router.push('/contacts')} className={styles.ml15} href="#">КОНТАКТЫ</a>
+
       </div>
+      {status == 'authenticated' ? <a onClick={() => router.push('/api/auth/signout')} className={styles.signout} href="#">Выйти</a> : null}
     </div>
   )
 }
