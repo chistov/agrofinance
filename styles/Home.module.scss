@@ -1,8 +1,92 @@
+@import "styles/globals";
+
 .container {
 }
 
-.main {
+.hdr {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+  margin-left: 10px;
+  color: #ffffff;
+  background-color: #fc0011;
+  padding: 10px;
 }
+
+.section {
+  margin-top: 270px;
+  margin-left: 30px;
+}
+
+.off_dealers {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.balls_root {
+  display: flex;
+  margin-top: 30px;
+
+  .dot {
+    height: 200px;
+    width: 200px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+
+  .dot:first-child {
+    z-index: 4;
+  }
+
+  .maschio_logo {
+    width: 135px;
+    margin-top: 33px;
+    margin-left: 30px;
+  }
+
+  .gates_logo {
+    width: 170px;
+    margin-top: 60px;
+    margin-left: 15px;
+  }
+
+  .pwgroup_logo {
+    width: 187px;
+    margin-top: 88px;
+    margin-left: 8px;
+  }
+
+  .dot:nth-child(2) {
+    z-index: 3;
+    margin-left: -10px;
+  }
+
+  .dot:nth-child(3) {
+    z-index: 2;
+    margin-left: -10px;
+  }
+
+  //.dot:before {
+  //  content: '';
+  //  position: absolute;
+  //}
+}
+
+.hdr_wrapper {
+  padding-top: 70px
+}
+
+.main {
+  margin-top: calc(#{$navbar-height} + 15px);
+
+  header {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+  }
+}
+
 
 .main:before {
   content: '';

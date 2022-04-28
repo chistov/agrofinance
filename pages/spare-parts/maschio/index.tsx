@@ -26,7 +26,7 @@ const Maschio = ({cards}: Resp) => {
               </div>
             </div>
           </div>
-          <div className="row d-flex justify-content-center">
+          <div className={common.cards + " row d-flex justify-content-start"}>
             {
               cards.map(c => (
                   <div className="col-4" key={c.id}>
