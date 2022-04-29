@@ -98,7 +98,7 @@ const Admin = ({data}) => {
 
 }
 
-export async function getServerSideProps(context: any) {
+export async function getStaticProps(context: any) {
 //   const connection = mysql({
 //     config: {
 //       host: 'afsagryl.beget.tech',
