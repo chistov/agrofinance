@@ -18,14 +18,18 @@ interface Req extends IncomingMessage {
 
 
 handler.post(async (req:Req, res) => {
+  // @ts-ignore
   const brand = req.body.brand[0];
 
   // const saveFile = (name: string, img: any) => fs.writeFileSync(`imgs/${name}`, img);
+  // @ts-ignore
   const insert = `INSERT INTO ${brand} (header, body) VALUES('${req.body.hdr[0]}', '${req.body.body[0]}') ;`
   console.log('ins: ', insert);
   const result = await execQuery(insert, []);
+  // @ts-ignore
   const idx = result.insertId;
 
+  // @ts-ignore
   const filePath = req.files.picture[0].path;
   const ext = filePath.substring(filePath.lastIndexOf('.'))
   const img = fs.readFileSync(filePath);
@@ -49,6 +53,7 @@ export default handler
 
 interface Req {
   method: string;
+  // @ts-ignore
   body: string;
 }
 

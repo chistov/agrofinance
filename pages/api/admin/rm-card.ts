@@ -14,6 +14,7 @@ export default async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   let query = `select path from ${brand} where id=${id}`;
   const r = await execQuery(query, []);
   console.log('r: ')
+  // @ts-ignore
   const path = r[0].path;
   if(path) {
     query = `delete from ${brand} where id=${id}`;
@@ -21,10 +22,12 @@ export default async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     fs.unlink('public' + path, function(err) {
       if (err) console.error(err);
       console.log('success rm file = ', path);
+      // @ts-ignore
       return res.status(200).json({result: 'test'});
     });
   }
   else {
+    // @ts-ignore
     res.status(400).json({ result: 'Error with item remove' })
   }
 }
