@@ -1,10 +1,9 @@
-import {useSession} from "next-auth/react";
 import Router from "next/router";
 import "bootstrap/dist/css/bootstrap.css";
 import {Image} from "react-bootstrap";
 import execQuery from "../../../db";
 import Navbar from "../../../components-common/Navbar";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import styles from "../../../styles/Contacts.module.scss";
 import common from "../../../styles/Common.module.scss";
 
@@ -14,15 +13,37 @@ interface Resp {
 }
 
 const Maschio = ({cards}: Resp) => {
-  const {status} = useSession();
+  const [admin, setAdmin] = useState(false);
+  useEffect(() => {
+    if (typeof localStorage !== 'undefined') {
+      const token = localStorage.getItem('token');
+      if(token) {
+        fetch('/api/auth', {
+          method: 'POST',
+          headers: {'Content-type': 'application/json'},
+          body: JSON.stringify({token})
+        })
+          .then(async rsp => {
+            console.log('rsp: ', rsp)
+            // @ts-ignore
+            if(rsp.status == 200) {
+              setAdmin(true);
+            }
+          })
+          .catch(e => console.log('err: ', e));
+
+      }
+    }}, [typeof localStorage])
 
   const rm = (id: number) => {
     console.log('rm id: ', id);
+    const token = localStorage.getItem('token');
     fetch('/api/admin/rm-card', {
       method: 'POST',
       body: JSON.stringify({
         brand: 'maschio',
-        id: id
+        id,
+        token
       })
     })
       .then(res => {
@@ -58,7 +79,7 @@ const Maschio = ({cards}: Resp) => {
                       <div className="card-body">
                         <h5 className="card-title">{c.hdr}</h5>
                         <pre className="card-text">{c.body}</pre>
-                        { status == 'authenticated' ? <button className="btn btn-secondary" onClick={() => rm(c.id)}>Удалить</button> : null }
+                        { admin ? <button className="btn btn-secondary" onClick={() => rm(c.id)}>Удалить</button> : null }
                       </div>
                     </div>
                   </div>
@@ -79,7 +100,7 @@ interface SqlResp {
   body: string;
   path: string;
 }
-export async function getServerSideProps(context: any) {
+export async function getStaticProps(context: any) {
   const rows:Array<SqlResp> = [];
   await execQuery("SELECT * FROM `maschio`;", [])
     // @ts-ignore

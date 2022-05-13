@@ -3,9 +3,8 @@ import jwt from "jsonwebtoken";
 import bcrypt from 'bcryptjs';
 import execQuery from "../../db";
 
-const KEY="jl;kjl;jduopwqeufrvhycvpivcnb";
-export default async function (req: NextApiRequest, res: NextApiResponse) {
-  console.log('login works', req.body);
+const KEY = process.env.JWT_KEY;
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if(!req.body) {
     console.log('')
     res.statusCode = 401;
@@ -18,13 +17,11 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
     // db look up
     // @ts-ignore
     const [creds] = await execQuery("select * from `users`;", []);
-    console.log('user: ', creds);
     const match = await bcrypt.compare(password, creds.pwd);
-    console.log('match: ', match);
     if(creds.user == username && match) {
       console.log('200 login');
       res.json({
-        token: jwt.sign({username}, KEY)
+        token: jwt.sign(username, KEY as string)
       })
       res.statusCode = 200;
       return;
@@ -37,3 +34,5 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
   res.statusCode = 401;
   res.end('Incorrect user or password');
 }
+
+export default handler;

@@ -1,5 +1,4 @@
 import {createPool} from 'mysql';
-import {rejects} from "assert";
 
 const pool = createPool({
   host: "afsagryl.beget.tech",
@@ -25,7 +24,6 @@ const execQuery = (query: string, params: []) => {
           rej();
         }
         console.log('sql data: ', data)
-        console.log('query success');
         res(data);
       })
     }

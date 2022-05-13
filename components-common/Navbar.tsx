@@ -1,12 +1,32 @@
 import Image from "next/image";
 import styles from './Navbar.module.scss'
 import {useRouter} from "next/router";
-import {useEffect} from "react";
-import {useSession} from "next-auth/react";
+import {useEffect, useState} from "react";
 
 const Navbar = () => {
   const router = useRouter();
-  const {status} = useSession();
+  const [logged, setLogged] = useState(false);
+
+  const [admin, setAdmin] = useState(false);
+  useEffect(() => {
+    if (typeof localStorage !== 'undefined') {
+      const token = localStorage.getItem('token');
+      if(token) {
+        fetch('/api/auth', {
+          method: 'POST',
+          headers: {'Content-type': 'application/json'},
+          body: JSON.stringify({token})
+        })
+          .then(async rsp => {
+            // @ts-ignore
+            if(rsp.status == 200) {
+              setAdmin(true);
+            }
+          })
+          .catch(e => console.log('err: ', e));
+
+      }
+    }}, [typeof localStorage])
 
   useEffect(() => { // document not available outside useEffect
     window.onscroll = function () {
@@ -67,7 +87,7 @@ const Navbar = () => {
         <a onClick={() => router.push('/contacts')} className={styles.ml15} href="#">КОНТАКТЫ</a>
 
       </div>
-      {status == 'authenticated' ? <a onClick={() => router.push('/api/auth/signout')} className={styles.signout} href="#">Выйти</a> : null}
+      {  admin ? <a onClick={() => {}} className={styles.signout} href="#">Выйти</a> : null}
     </div>
   )
 }

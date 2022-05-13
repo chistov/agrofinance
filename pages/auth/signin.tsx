@@ -1,10 +1,12 @@
 
 // @ts-ignore
 import {useEffect, useState} from "react";
+import {useRouter} from "next/router";
 
 export default function SignIn() {
 // export default function SignIn({ csrfToken }) {
 //   console.log('ls: ', localStorage);
+  const router = useRouter();
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     if (typeof localStorage !== 'undefined') {
@@ -18,7 +20,7 @@ export default function SignIn() {
     }
   }, [typeof localStorage])
 
-  const test = async () => {
+  const singIn = async () => {
     await fetch('/api/login', {
       method: 'POST',
       headers: {'Content-type': 'application/json'},
@@ -27,11 +29,19 @@ export default function SignIn() {
         password
       })
     })
-      .then(rsp => rsp.json())
-      .then(rsp => {
+      .then(async rsp => {
+
+        if(rsp.status != 200) {
+          console.log('bad response');
+          return;
+        }
+
+        const json = await rsp.json()
         // @ts-ignore
-        localStorage.setItem('token', rsp.token)
-        console.log('rsp: ', rsp)
+        if(rsp.status == 200) {
+          localStorage.setItem('token', json.token)
+          await router.push('/adm321');
+        }
       })
       .catch(e => console.log('err: ', e));
   }
@@ -40,31 +50,27 @@ export default function SignIn() {
   const [password, setPassword] = useState('');
 
   return (
-    <>
-    {loading && <div>Loading</div>}
-      <div>
-      {/*<form method="post" action="/api/auth/callback/credentials">*/}
-        <label>
-          Username
-          <input name="user" type="text"
-             value={username} onChange={(e) => setUsername(e.target.value)}/>
-        </label>
-        <label>
-          Password
-          <input name="password" type="password"
-             value={password} onChange={(e) => setPassword(e.target.value)}/>
-        </label>
-        <button onClick={ () => test()}>Sign in</button>
+    <div className="container mt-3 mt-md-5">
+      <div className="row d-flex justify-content-center">
+        <div className="col-4">
+          {loading && <div>Загрузка</div>}
+          <label>
+             Имя пользователя
+            <input name="user" type="text"
+                   value={username} onChange={(e) => setUsername(e.target.value)}/>
+          </label>
+        </div>
       </div>
-    </>
-)
+      <div className="row d-flex justify-content-center">
+        <div className="col-4">
+          <label>
+            Пароль
+            <input name="password" type="password"
+                   value={password} onChange={(e) => setPassword(e.target.value)}/>
+          </label>
+          <button onClick={singIn}>Войти</button>
+        </div>
+      </div>
+    </div>
+      )
 }
-
-// @ts-ignore
-// export async function getStaticProps(context) {
-//   return {
-//     props: {
-//       csrfToken: await getCsrfToken(context),
-//     },
-//   }
-// }
