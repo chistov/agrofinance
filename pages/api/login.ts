@@ -6,9 +6,8 @@ import execQuery from "../../db";
 const KEY = process.env.JWT_KEY;
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if(!req.body) {
-    console.log('')
     res.statusCode = 401;
-    res.end('Error');
+    res.end('Body absent');
     return
   }
 
