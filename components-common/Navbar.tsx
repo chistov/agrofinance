@@ -51,6 +51,12 @@ const Navbar = () => {
     }
   });
 
+  const logOut = async () => {
+    localStorage.removeItem('token');
+    setAdmin(false);
+    await router.push('/');
+  }
+
   return (
     <div id="navbar" className={styles.navbar}>
       <div className={styles.brand}>
@@ -87,7 +93,7 @@ const Navbar = () => {
         <a onClick={() => router.push('/contacts')} className={styles.ml15} href="#">КОНТАКТЫ</a>
 
       </div>
-      {  admin ? <a onClick={() => {}} className={styles.signout} href="#">Выйти</a> : null}
+      {  admin ? <a onClick={logOut} className={styles.signout} href="#">Выйти</a> : null}
     </div>
   )
 }
