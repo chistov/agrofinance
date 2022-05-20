@@ -45,7 +45,7 @@ apiRoute.post(async (req: NextApiRequest, res: NextApiResponse) => {
   // @ts-ignore
   const img = req.files[0].buffer;
   const path = `/spare-parts/${brand}/${idx}${ext}`; // путь буфера для img src страницы запчастей
-  fs.writeFile('public' + path, img, function(err) {
+  fs.writeFile('static' + path, img, function(err) {
     if (err) return console.error(err);
   });
 

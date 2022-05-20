@@ -1,19 +1,35 @@
-import Router from "next/router";
 import "bootstrap/dist/css/bootstrap.css";
 import {Image} from "react-bootstrap";
-import execQuery from "../../../db";
 import Navbar from "../../../components-common/Navbar";
 import React, {useEffect, useState} from "react";
 import styles from "../../../styles/Contacts.module.scss";
 import common from "../../../styles/Common.module.scss";
 
-
-interface Resp {
-  cards: Array<{id: number, hdr: string, body: string, path: string}>
-}
-
-const Maschio = ({cards}: Resp) => {
+const Maschio = () => {
   const [admin, setAdmin] = useState(false);
+  const [cards, setCards] = useState([]);
+
+  const download = () => {
+    fetch('/api/cards?company=maschio', {
+      method: 'GET'
+    })
+      .then(rsp => {
+        // @ts-ignore
+        if(rsp.status == 200) {
+          // @ts-ignore
+          return rsp.json()
+        }
+      })
+      .then(rsp => {
+        setCards(rsp.cards);
+      })
+      .catch(e => console.log('err: ', e));
+  }
+
+  useEffect(() => {
+    download();
+  }, []);
+
   useEffect(() => {
     if (typeof localStorage !== 'undefined') {
       const token = localStorage.getItem('token');
@@ -24,7 +40,6 @@ const Maschio = ({cards}: Resp) => {
           body: JSON.stringify({token})
         })
           .then(async rsp => {
-            console.log('rsp: ', rsp)
             // @ts-ignore
             if(rsp.status == 200) {
               setAdmin(true);
@@ -36,7 +51,6 @@ const Maschio = ({cards}: Resp) => {
     }}, [typeof localStorage])
 
   const rm = (id: number) => {
-    console.log('rm id: ', id);
     const token = localStorage.getItem('token');
     fetch('/api/admin/rm-card', {
       method: 'POST',
@@ -46,12 +60,7 @@ const Maschio = ({cards}: Resp) => {
         token
       })
     })
-      .then(res => {
-        if(res.status == 200) {
-          Router.reload();
-        }
-        console.log('resp: ', res)
-      })
+      .then(() => download())
   }
 
   return (
@@ -77,7 +86,7 @@ const Maschio = ({cards}: Resp) => {
                              height={'250px'}
                              alt="Card image cap"/>
                       <div className="card-body">
-                        <h5 className="card-title">{c.hdr}</h5>
+                        <h5 className="card-title">{c.header}</h5>
                         <pre className="card-text">{c.body}</pre>
                         { admin ? <button className="btn btn-secondary" onClick={() => rm(c.id)}>Удалить</button> : null }
                       </div>
@@ -92,31 +101,6 @@ const Maschio = ({cards}: Resp) => {
     </div>
 
   )
-}
-
-interface SqlResp {
-  id: number;
-  hdr: string;
-  body: string;
-  path: string;
-}
-export async function getStaticProps(context: any) {
-  const rows:Array<SqlResp> = [];
-  await execQuery("SELECT * FROM `maschio`;", [])
-    // @ts-ignore
-    .then((res:Array<SqlResp>) =>
-      res.forEach((row:any) =>
-        rows.push({
-          id: row.id,
-          hdr: row.header,
-          body: row.body,
-          path: row.path,
-        })));
-  console.log('rows: ', rows);
-
-  return {
-    props: {cards: rows}, // will be passed to the page component as props
-  }
 }
 
 export default Maschio;
