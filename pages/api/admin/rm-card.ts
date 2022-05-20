@@ -25,7 +25,7 @@ export default async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   if(path) {
     query = `delete from ${brand} where id=${id}`;
     await execQuery(query, []);
-    fs.unlink('public' + path, function(err) {
+    fs.unlink('static' + path, function(err) {
       if (err) console.error(err);
       // @ts-ignore
       return res.status(200).json({result: 'test'});
