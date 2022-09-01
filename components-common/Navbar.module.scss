@@ -6,27 +6,32 @@
   height: $navbar-height;
   width: 100%;
 
-  background-color: #f1f1f1;
   transition: 0.4s; /* Adds a transition effect when the padding is decreased */
   position: fixed; /* Sticky/fixed navbar */
   top: 0; /* At the top */
   z-index: 1;
 
-  background-color: red;
-  color: red;
+  background-color: #ff6440;
 }
 
 .brand {
   padding-left: 15px;
-  flex-basis: 50%;
+  flex-basis: 40%;
 }
 
 .navimg {
   cursor: pointer;
+  transform: translateX(150px);
 }
 
 .ml15 {
   margin-left: 15px;
+  padding: 20px;
+}
+
+.active {
+  background-color: #15151c;
+  border-radius: 5px;
 }
 
 .signout {
@@ -38,11 +43,73 @@
 }
 
 .menu {
-color: black;
   a {
-    font-family: 'Roboto', 'Arial', sans-serif;
-    color: black;
+    font-family: 'Roboto', 'Arial' ;
+    font-size: 17px;
+    //color: #101D5D;
+    color: ghostwhite;
     text-decoration: none;
+    position: relative;
+    display: inline-block;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #71b38b;
+      opacity: 0;
+      //transition: opacity 300ms, transform 300ms;
+
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #71b38b;
+      opacity: 0;
+      //transition: opacity 300ms, transform 300ms;
+      //animation: menu-bottom 0.5s ease-in-out;
+    }
+
+    &:hover:before {
+      opacity: 1;
+      animation: menu-top 0.3s ease-in-out;
+    }
+
+    &:hover:after {
+      opacity: 1;
+      animation: menu-bottom 0.3s ease-in-out;
+    }
+
+  }
+}
+
+@keyframes menu-top {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  100% {
+    opacity: 1;
+    top: -5px;
+  }
+}
+
+@keyframes menu-bottom {
+  0% {
+    opacity: 0;
+    bottom: 0;
+  }
+  100% {
+    opacity: 1;
+    bottom: -5px;
   }
 }
 
@@ -71,3 +138,12 @@ color: black;
 .dropdown_content a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown_content {display: block;}
+
+.line {
+  width: 97px;
+  position: absolute;
+  transform: translateX(120px) translateY(-1px);
+  height: 40px;
+
+  transition: all 0.5s ease-out;
+}

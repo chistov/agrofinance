@@ -2,40 +2,20 @@ import Image from "next/image";
 import styles from './Navbar.module.scss'
 import {useRouter} from "next/router";
 import {useEffect, useState} from "react";
+import Link from 'next/link'
 
 const Navbar = () => {
   const router = useRouter();
-  const [logged, setLogged] = useState(false);
+  // console.log('route: ', router.pathname);
+  const [path, setPath] = useState(router.pathname);
+  console.log('path: ', path);
 
   const [admin, setAdmin] = useState(false);
-  useEffect(() => {
-    if (typeof localStorage !== 'undefined') {
-      const token = localStorage.getItem('token');
-      if(token) {
-        fetch('/api/auth', {
-          method: 'POST',
-          headers: {'Content-type': 'application/json'},
-          body: JSON.stringify({token})
-        })
-          .then(async rsp => {
-            // @ts-ignore
-            if(rsp.status == 200) {
-              setAdmin(true);
-            }
-          })
-          .catch(e => console.log('err: ', e));
-
-      }
-    }}, [typeof localStorage])
 
   useEffect(() => { // document not available outside useEffect
     window.onscroll = function () {
       scrollFunction()
     };
-
-    // const isExist = (needle: string): HTMLElement | null => {
-    //   return
-    // }
 
     function scrollFunction() {
       let el: HTMLElement | null = null;
@@ -72,25 +52,20 @@ const Navbar = () => {
 
       </div>
       <div className={styles.menu}>
-        <a href="#" onClick={() => router.push('/')}>ГЛАВНАЯ</a>
-        <div className={styles.dropdown + ' ' + styles.ml15}>
-          <a onClick={() => router.push('/')} className={styles.dropbtn}>ТЕХНИКА</a>
-          <div className={styles.dropdown_content}>
-            <a onClick={() => router.push('/tech/opal-agri')}>Opal Agri</a>
-            <a onClick={() => router.push('/tech/gaspardo')}>Gaspardo</a>
-          </div>
-        </div>
-
-        <div className={styles.dropdown + ' ' + styles.ml15}>
-          <a onClick={() => router.push('/spare-parts')} className={styles.ml15} href="#">ЗАПЧАСТИ</a>
-          <div className={styles.dropdown_content}>
-            <a onClick={() => router.push('/spare-parts/maschio')}>Maschio</a>
-            <a onClick={() => router.push('/spare-parts/pwgroup')}>PWGroup</a>
-          </div>
-        </div>
-
-        <a onClick={() => router.push('/service')} className={styles.ml15} href="#">СЕРВИС</a>
-        <a onClick={() => router.push('/contacts')} className={styles.ml15} href="#">КОНТАКТЫ</a>
+        <Link href="/">
+          <a className={styles.ml15 + ' ' + (path == '/' ? styles.active : '')}>ГЛАВНАЯ</a>
+        </Link>
+        <Link href="/spare-parts">
+          <a className={styles.ml15 + ' ' + (path == '/spare-parts' ? styles.active : '')}>ЗАПЧАСТИ</a>
+        </Link>
+        <Link href='/address'>
+          <a className={styles.ml15 + ' ' + (path == '/address' ? styles.active : '')}>СХЕМА ПРОЕЗДА</a>
+        </Link>
+        <Link href='/contacts'>
+            <a className={styles.ml15 + ' ' + (path == '/contacts' ? styles.active : '')}>
+              {/*<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></svg>*/}
+              КОНТАКТЫ</a>
+        </Link>
 
       </div>
       {  admin ? <a onClick={logOut} className={styles.signout} href="#">Выйти</a> : null}

@@ -1,0 +1,97 @@
+%base-img {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+%intern-img {
+  width: 50%;
+  position: relative;
+
+  &:after {
+    @extend %base-img;
+  }
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 90px);
+  justify-content: center;
+  align-items: center;
+}
+
+.hdr {
+  width: 300px;
+  margin-bottom: 100px;
+}
+
+.kver {
+  width: 250px;
+  margin-bottom: 100px;
+}
+
+.amazone {
+  width: 300px;
+  margin-bottom: 100px;
+  background-color: #fc5816;
+}
+
+.subcontainer {
+  display: flex;
+  min-height: 60%;
+
+  * {
+    flex-basis: 50%;
+  }
+}
+
+.pochva {
+  @extend %intern-img;
+
+  &:after {
+    background-image: url("/assets/claas_z.jpg");
+    opacity: 0.4;
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  padding: 15px;
+}
+
+.intro {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 16px;
+
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: unset;
+  margin-top: 50%;
+
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.email {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+}
