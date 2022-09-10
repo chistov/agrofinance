@@ -19,13 +19,6 @@ const nextConfig = {
   ) {
     return {
       '/': { page: '/' },
-      '/tech/opal-agri': { page: '/tech/opal-agri' },
-      '/tech/gaspardo': { page: '/tech/gaspardo' },
-      // '/tech/opal-agri/item/': { page: '/tech/opal-agri/item/1' },
-      '/tech/opal-agri/item/id': { page: '/tech/opal-agri/item/[id]' },
-      '/tech/gaspardo/item/id': { page: '/tech/gaspardo/item/[id]' },
-      '/adm321': { page: '/adm321' },
-      '/auth/signin': { page: '/auth/signin' },
     }
   },
   generateBuildId: async () => {

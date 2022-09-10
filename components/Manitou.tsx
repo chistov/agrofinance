@@ -9,7 +9,7 @@ export default function Manitou() {
       <img className={styles.hdr} src="/assets/logo-manitou.svg" alt="manitou logo"/>
       <div className={styles.subcontainer}>
         <div className={styles.manitou}></div>
-        <div classname={styles.item}>
+        <div className={styles.item}>
           <div className={styles.intro}>
             Предлагаем полный ассортимент запчастей, шин, комплектующих, расходных материалов и навесного оборудования на
             технику с нашего склада и под заказ. Фильтрующие элементы, расходники и наиболее ходовые

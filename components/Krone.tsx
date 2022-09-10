@@ -9,7 +9,7 @@ export default function Krone() {
       <img className={styles.kver} src="/assets/krone_logo.png" alt="krone logo"/>
       <div className={styles.subcontainer}>
         <div className={styles.krone}></div>
-        <div classname={styles.item}>
+        <div className={styles.item}>
           <div className={styles.intro}>
             Предлагаем полный ассортимент запчастей, шин, комплектующих, расходных материалов и навесного оборудования на
             технику с нашего склада и под заказ. Фильтрующие элементы, расходники и наиболее ходовые

@@ -25,8 +25,8 @@ export default function Address(props = null) {
   const [path, setPath] = useState('maschio');
 
   const clickItem = (ev) => {
-    console.log('name: ', ev.target.getAttribute('name') );
-    setPath(ev.target.getAttribute('name'));
+    console.log('name: ', ev.target.getAttribute('data-name') );
+    setPath(ev.target.getAttribute('data-name'));
   }
 
   const tech = [
@@ -56,31 +56,31 @@ export default function Address(props = null) {
       <main className={styles.container}>
         <aside className={styles.aside}>
           <div className={styles.menu}>
-            <div name="maschio" onClick={clickItem}
+            <div data-name="maschio" onClick={clickItem}
                  className={styles.item + ' ' +(path == 'maschio' ? styles.active : '')}>Maschio Gaspardo</div>
-            <div name="claas" onClick={clickItem}
+            <div data-name="claas" onClick={clickItem}
                  className={styles.item  + ' ' + (path == 'claas' ? styles.active : '')}>Claas</div>
-            <div name="lemken" onClick={clickItem}
+            <div data-name="lemken" onClick={clickItem}
                  className={styles.item + ' ' + (path == 'lemken' ? styles.active : '')}>Lemken</div>
-            <div name="grimme" onClick={clickItem}
+            <div data-name="grimme" onClick={clickItem}
                  className={styles.item  + ' ' + (path == 'grimme' ? styles.active : '')}>Grimme</div>
-            <div name="amazone" onClick={clickItem}
+            <div data-name="amazone" onClick={clickItem}
                  className={styles.item  + ' ' + (path == 'amazone' ? styles.active : '')}>Amazone</div>
-            <div name="john" onClick={clickItem}
+            <div data-name="john" onClick={clickItem}
                  className={styles.item  + ' ' + (path == 'john' ? styles.active : '')}>JohnDeere</div>
-            <div name="bob" onClick={clickItem}
+            <div data-name="bob" onClick={clickItem}
                  className={styles.item  + ' ' + (path == 'bob' ? styles.active : '')}>Bobcat</div>
-            <div name="man" onClick={clickItem}
+            <div data-name="man" onClick={clickItem}
                  className={styles.item  + ' ' + (path == 'man' ? styles.active : '')}>Manitou</div>
-            <div name="kver" onClick={clickItem}
+            <div data-name="kver" onClick={clickItem}
                  className={styles.item  + ' ' + (path == 'kver' ? styles.active : '')}>Kverneland</div>
-            <div name="kuhn" onClick={clickItem}
+            <div data-name="kuhn" onClick={clickItem}
                  className={styles.item  + ' ' + (path == 'kuhn' ? styles.active : '')}>Kuhn</div>
-            <div name="krone" onClick={clickItem}
+            <div data-name="krone" onClick={clickItem}
                  className={styles.item  + ' ' + (path == 'krone' ? styles.active : '')}>Krone</div>
-            <div name="tyr" onClick={clickItem}
+            <div data-name="tyr" onClick={clickItem}
               className={styles.item  + ' ' + (path == 'tyr' ? styles.active : '')}>Шины</div>
-            <div name="oil" onClick={clickItem}
+            <div data-name="oil" onClick={clickItem}
               className={styles.item  + ' ' + (path == 'oil' ? styles.active : '')}>Масло</div>
           </div>
         </aside>

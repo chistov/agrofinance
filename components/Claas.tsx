@@ -9,7 +9,7 @@ export default function Claas() {
       <img className={styles.hdr} src="/assets/claas-logo-large.jpg" alt="claas logo"/>
       <div className={styles.subcontainer}>
         <div className={styles.pochva}></div>
-        <div classname={styles.item}>
+        <div className={styles.item}>
           <div className={styles.intro}>
             Предлагаем полный ассортимент запчастей, шин, комплектующих, расходных материалов и навесного оборудования на
             технику с нашего склада и под заказ. Фильтрующие элементы, расходники и наиболее ходовые

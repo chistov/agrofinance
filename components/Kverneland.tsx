@@ -9,7 +9,7 @@ export default function Kverneland() {
       <img className={styles.kver} src="/assets/kverneland-logo.png" alt="kverneland logo"/>
       <div className={styles.subcontainer}>
         <div className={styles.kvern}></div>
-        <div classname={styles.item}>
+        <div className={styles.item}>
           <div className={styles.intro}>
             Предлагаем полный ассортимент запчастей, шин, комплектующих, расходных материалов и навесного оборудования на
             технику с нашего склада и под заказ. Фильтрующие элементы, расходники и наиболее ходовые

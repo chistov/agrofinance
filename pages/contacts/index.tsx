@@ -65,7 +65,7 @@ export default function Contacts(props = null) {
         <div className={styles.bg}></div>
         <h2 className={styles.hdr}>Контакты</h2>
         <div className={styles.visit}>
-          <VisitCard workers={workers}></VisitCard>
+          <VisitCard workers={workers}  width={null} height={null}></VisitCard>
         </div>
 
       </div>

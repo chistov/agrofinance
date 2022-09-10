@@ -9,7 +9,7 @@ export default function Lemken() {
       <img className={styles.hdr} src="/assets/lemken-logo.svg" alt="lemken logo"/>
       <div className={styles.subcontainer}>
         <div className={styles.lemken}></div>
-        <div classname={styles.item}>
+        <div className={styles.item}>
           <div className={styles.intro}>
             Предлагаем полный ассортимент запчастей на технику LEMKEN (Лемкен) с нашего склада и под заказ. Наиболее ходовые
             запчасти есть в наличии на складе.
