@@ -8,7 +8,7 @@ export default function Amazone() {
     <div className={styles.container}>
       <img className={styles.amazone} src="/assets/logo-amazone.svg" alt="amazone logo"/>
       <div className={styles.subcontainer}>
-        <div className={styles.pochva}></div>
+        <div className={styles.amazonei}></div>
         <div classname={styles.item}>
           <div className={styles.intro}>
             Предлагаем полный ассортимент запчастей, шин, комплектующих, расходных материалов и навесного оборудования на
@@ -17,12 +17,9 @@ export default function Amazone() {
           </div>
 
           <div className={styles.contacts}>
-            Заявку на запчасти CLAAS Вы можете отправить на электронные адреса:
+            Заявку на запчасти AMAZONE Вы можете отправить на электронные адреса:
             <div className={styles.email}>sokolov@afs-nn.ru</div>
-            <div className={styles.email}>urakov@afs-nn.ru</div>
-            <div className={styles.email}>grachev@afs-nn.ru</div>
             <div className={styles.email}>degoeva@afs-nn.ru</div>
-            <div className={styles.email}>antonov@afs-nn.ru</div>
           </div>
         </div>
       </div>

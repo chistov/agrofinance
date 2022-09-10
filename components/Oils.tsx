@@ -4,9 +4,10 @@ export default function Oils() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.oil_hdr}>Масло</div>
       <div className={styles.subcontainer}>
         <div className={styles.item}>
-          <table bordercolorlight="#C0C0C0" bordercolordark="#808080" border="1" bgcolor="#FFFFFF">
+          <table className={styles.table} bordercolorlight="#C0C0C0" bordercolordark="#808080" border="1" bgcolor="#FFFFFF">
             <tbody>
             <tr valign="top">
               <td width="100">

@@ -9,9 +9,9 @@ export default function Address(props = null) {
     <div>
       <Navbar/>
       <div className={styles.container}>
-        <h2 >Схема проезда</h2>
-        <div>ООО 'АФС'</div>
-        <div className={styles.mb15}>г.Н.Новгород, ул.Федосеенко д.55</div>
+        <div className={styles.hdr_addr} >Схема проезда</div>
+        <div className={styles.subhdr}>ООО АФС</div>
+        <div className={styles.subhdr + ' ' + styles.mb15}>г.Н.Новгород, ул.Федосеенко д.55</div>
         <YMaps>
           <div>
             <Map width='100%' height='50vh' defaultState={{center: [56.338474, 43.809498], zoom: 17}}>

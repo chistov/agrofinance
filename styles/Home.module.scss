@@ -13,6 +13,14 @@
   height: calc(100vh - 90px);
 }
 
+.gasp_container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 90px);
+  width: 75%;
+  margin: 0 auto;
+}
+
 .subcontainer {
   display: flex;
   flex-basis: 25%;
@@ -21,6 +29,11 @@
 .item {
   //flex-basis: 50%;
   width: 50%;
+
+}
+
+.pl10 {
+  padding-left: 10px;
 }
 
 %base-img {
@@ -82,7 +95,7 @@
   font-size: 50px;
   font-weight: 500;
   font-style: italic;
-  color: #790d67;
+  color: #332A1C;
   margin-left: 10px;
   padding: 10px;
   animation:  pulse 0.5s ease-out;
@@ -135,6 +148,12 @@
   font-size: 35px;
   font-weight: 500;
   margin-right: 50px;
+}
+
+.hdr_maschio {
+  width: 200px;
+  margin-bottom: 20px;
+  margin: 0 auto;
 }
 
 .balls_root {
@@ -295,6 +314,6 @@
   display: block;
   left: 40px;
   padding-top: 30px;
-  color: #790d67;
+  color: #332A1C;
 }
 

@@ -15,6 +15,7 @@ import Kverneland from "../../components/Kverneland";
 import Kuhn from "../../components/Kuhn";
 import Krone from "../../components/Krone";
 import Oils from "../../components/Oils";
+import Tyres from "../../components/Tyres";
 
 export default function Address(props = null) {
 
@@ -97,16 +98,7 @@ export default function Address(props = null) {
             { (path == 'kuhn') && <Kuhn/> }
             { (path == 'krone') && <Krone/> }
             { (path == 'oil') && <Oils/> }
-          </section>
-          <section className={styles.contacts}>
-            { (path == 'maschio') &&
-              <>
-                <p className={styles.h2}>Заявка на технику:</p>
-                <VisitCard workers={tech} width={'250px'} height={'130px'}/>
-                <p className={styles.h2}>Заявка на запчасти:</p>
-                <VisitCard workers={spare} width={'250px'} height={'130px'}/>
-              </>
-            }
+            { (path == 'tyr') && <Tyres/> }
           </section>
         </main>
       </main>

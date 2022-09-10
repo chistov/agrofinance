@@ -1,12 +1,14 @@
 import styles from "../styles/Home.module.scss";
+import React from "react";
 
 export default function Gaspardo() {
 
   return (
-    <div className={styles.container}>
+    <div className={styles.gasp_container}>
+      <img className={styles.hdr_maschio} src="/assets/maschio-logo.png" alt="maschio logo"/>
       <div className={styles.subcontainer}>
         <div className={styles.pochva}></div>
-        <div className={styles.item}>
+        <div className={styles.item + ' ' + styles.pl10}>
           <h2>Подготовка почвы</h2>
           <ul>
             <li>Фрезы</li>

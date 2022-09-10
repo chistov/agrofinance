@@ -22,13 +22,28 @@
   display: flex;
   flex-direction: column;
   height: calc(100vh - 90px);
-  justify-content: center;
   align-items: center;
+  padding-top: 50px;
 }
 
 .hdr {
   width: 300px;
   margin-bottom: 100px;
+
+}
+
+.hdr_bobcat {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.tyres_hdr {
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+
+.oil_hdr {
+  font-size: 40px;
 }
 
 .kver {
@@ -49,6 +64,107 @@
   * {
     flex-basis: 50%;
   }
+
+}
+
+.tyres {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+
+}
+
+.tyre-card {
+  flex-basis: 30%;
+}
+
+.tyre {
+  height: 250px;
+  width: 360px;
+}
+
+/* imgs */
+
+
+.grimme {
+  @extend %intern-img;
+
+  &:after {
+    background-image: url("/assets/grimme.jpg");
+    opacity: 0.4;
+  }
+}
+
+.lemken {
+  @extend %intern-img;
+
+  &:after {
+    background-image: url("/assets/lemken.jpg");
+    opacity: 0.4;
+  }
+}
+
+.amazonei {
+  @extend %intern-img;
+
+  &:after {
+    background-image: url("/assets/amazone.jpg");
+    opacity: 0.4;
+  }
+}
+
+.john {
+  @extend %intern-img;
+
+  &:after {
+    background-image: url("/assets/john.jpg");
+    opacity: 0.4;
+  }
+}
+
+.bobcat {
+  @extend %intern-img;
+
+  &:after {
+    background-image: url("/assets/bobcat.jpg");
+    opacity: 0.4;
+  }
+}
+
+.manitou {
+  @extend %intern-img;
+
+  &:after {
+    background-image: url("/assets/manitou.jpg");
+    opacity: 0.4;
+  }
+}
+
+.kuhn {
+  @extend %intern-img;
+
+  &:after {
+    background-image: url("/assets/kuhn.jpg");
+    opacity: 0.4;
+  }
+}
+
+.kvern {
+  @extend %intern-img;
+
+  &:after {
+    background-image: url("/assets/kver.jpg");
+    opacity: 0.4;
+  }
+}
+
+.krone {
+  @extend %intern-img;
+
+  &:after {
+    background-image: url("/assets/krone.jpg");
+    opacity: 0.4;
+  }
 }
 
 .pochva {
@@ -68,13 +184,17 @@
   text-align: center;
   margin: auto;
   font-family: 'Roboto', 'Arial', sans-serif;
-  padding: 15px;
+  padding: 90px;
+}
+
+.table {
+  width: 650px;
 }
 
 .intro {
   font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 16px;
-
+  padding: 20px;
 }
 
 .contacts {
@@ -82,7 +202,7 @@
   flex-direction: column;
   align-items: center;
   flex-basis: unset;
-  margin-top: 50%;
+  padding: 20px;
 
   font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 16px;
