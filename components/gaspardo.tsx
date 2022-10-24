@@ -5,7 +5,8 @@ export default function Gaspardo() {
 
   return (
     <div className={styles.gasp_container}>
-      <img className={styles.hdr_maschio} src="/assets/maschio-logo.png" alt="maschio logo"/>
+      {/*<img className={styles.hdr_maschio} src="/assets/maschio-logo.png" alt="maschio logo"/>*/}
+      <h2>Machio Gaspardo</h2>
       <div className={styles.subcontainer}>
         <div className={styles.pochva}></div>
         <div className={styles.item + ' ' + styles.pl10}>

@@ -1,13 +1,18 @@
 import styles from "../styles/Claas.module.scss";
 import {Image} from "react-bootstrap";
 import React from "react";
+import useSWR from 'swr';
 
 export default function Claas() {
+  const fetcher = (url) => fetch(url).then((res) => res.json());
+  const { data } = useSWR('/assets/f.json', fetcher);
+  console.log('d: ', data);
 
   return (
     <div className={styles.container}>
-      <img className={styles.hdr} src="/assets/claas-logo-large.jpg" alt="claas logo"/>
+      <h2>CLAAS</h2>
       <div className={styles.subcontainer}>
+        { data && <div>data.ddd</div> }
         <div className={styles.pochva}></div>
         <div className={styles.item}>
           <div className={styles.intro}>
