@@ -26,6 +26,30 @@
   padding-top: 50px;
 }
 
+.card {
+  width: 360px;
+  height: 410px;
+  border: solid 1px #223140;
+  border-radius: 10px;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+.card_img {
+  width: 100%;
+}
+
+.card_title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 2%;
+}
+
+.card_txt {
+  font-size: 1.2rem;
+  padding: 2%;
+}
+
 .hdr {
   width: 300px;
   margin-bottom: 100px;
@@ -59,11 +83,14 @@
 
 .subcontainer {
   display: flex;
+  //width: 100%;
+  width: calc(100vw - 400px);
   min-height: 60%;
+  flex-wrap: wrap;
 
-  * {
-    flex-basis: 50%;
-  }
+  //* {
+  //  flex-basis: 50%;
+  //}
 
 }
 

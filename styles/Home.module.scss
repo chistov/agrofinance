@@ -272,22 +272,22 @@
 
 
 .main:before {
-  content: '';
-  position: absolute;
-  background-image: url("/assets/brand-combain.jpg");
+  //content: '';
+  //position: absolute;
+  //background-image: url("/assets/brand-combain.jpg");
 
   /* Full height */
-  height: 93.3vh;
-  width: 100%;
+  //height: 93.3vh;
+  //width: 100%;
 
 
   /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.3;
-  top: 90px;
-  z-index: 0;
+  //background-position: center;
+  //background-repeat: no-repeat;
+  //background-size: cover;
+  //opacity: 0.3;
+  //top: 90px;
+  //z-index: 0;
 }
 
 //.footer {
