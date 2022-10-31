@@ -14,8 +14,8 @@ export default function Claas() {
       <h2>CLAAS</h2>
       <div className={styles.subcontainer}>
         { data &&
-          data.map((it) =>
-              <Card className={styles.card} >
+          data.map((it, idx) =>
+              <Card key={idx} className={styles.card} >
                 <Card.Img className={styles.card_img} variant="top" src={it.img}></Card.Img>
                 <Card.Body>
                   <Card.Title className={styles.card_title}>{it.ddd}</Card.Title>
