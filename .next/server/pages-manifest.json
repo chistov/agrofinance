@@ -1,0 +1,12 @@
+{
+  "/404": "pages/404.html",
+  "/500": "pages/500.html",
+  "/_app": "pages/_app.js",
+  "/address": "pages/address.html",
+  "/contacts": "pages/contacts.html",
+  "/": "pages/index.html",
+  "/spare-parts": "pages/spare-parts.html",
+  "/tech": "pages/tech.html",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js"
+}
