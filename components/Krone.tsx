@@ -6,7 +6,8 @@ export default function Krone() {
 
   return (
     <div className={styles.container}>
-      <img className={styles.kver} src="/assets/krone_logo.png" alt="krone logo"/>
+      {/*<img className={styles.kver} src="/assets/krone_logo.png" alt="krone logo"/>*/}
+      <div className={styles.tyres_hdr}>KRONE</div>
       <div className={styles.subcontainer}>
         <div className={styles.krone}></div>
         <div className={styles.item}>

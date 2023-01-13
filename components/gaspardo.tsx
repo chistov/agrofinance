@@ -1,4 +1,5 @@
 import styles from "../styles/Home.module.scss";
+import st from "@/styles/Claas.module.scss";
 import React from "react";
 
 export default function Gaspardo() {
@@ -6,7 +7,7 @@ export default function Gaspardo() {
   return (
     <div className={styles.gasp_container}>
       {/*<img className={styles.hdr_maschio} src="/assets/maschio-logo.png" alt="maschio logo"/>*/}
-      <h2>Machio Gaspardo</h2>
+      <div className={st.tyres_hdr}>MACHIO GASPARDO</div>
       <div className={styles.subcontainer}>
         <div className={styles.pochva}></div>
         <div className={styles.item + ' ' + styles.pl10}>

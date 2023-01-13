@@ -5,7 +5,8 @@ export default function Bobcat() {
 
   return (
     <div className={styles.container}>
-      <img className={styles.hdr_bobcat} src="/assets/bobcat-logo.png" alt="bobcat logo"/>
+      {/*<img className={styles.hdr_bobcat} src="/assets/bobcat-logo.png" alt="bobcat logo"/>*/}
+      <div className={styles.tyres_hdr}>BOBCAT</div>
       <div className={styles.subcontainer}>
         <div className={styles.bobcat}></div>
         <div className={styles.item}>

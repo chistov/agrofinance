@@ -6,7 +6,8 @@ export default function JohnDeere() {
 
   return (
     <div className={styles.container}>
-      <img className={styles.hdr} src="/assets/deere-logo.svg" alt="john deere logo"/>
+      {/*<img className={styles.hdr} src="/assets/deere-logo.svg" alt="john deere logo"/>*/}
+      <div className={styles.tyres_hdr}>JOHN DEERE</div>
       <div className={styles.subcontainer}>
         <div className={styles.john}></div>
         <div className={styles.item}>

@@ -1,13 +1,12 @@
 import Navbar from "./Navbar";
 import styles from "../styles/Layout.module.scss";
 
-const Header = () => null
+const Header = (props:any) => null
 
-const Body = () => null
+const Body = (props:any) => null
 
-const Footer = () => null
+const Footer = (props:any) => null
 
-// @ts-ignore
 const DefaultLayout  = ({ children }) => {
 
   const header = children.find((el: { type: () => null; }) => el.type === Header)

@@ -6,7 +6,8 @@ export default function Grimme() {
 
   return (
     <div className={styles.container}>
-      <img className={styles.hdr} src="/assets/logo-grimme.svg" alt="grimme logo"/>
+      {/*<img className={styles.hdr} src="/assets/logo-grimme.svg" alt="grimme logo"/>*/}
+      <div className={styles.tyres_hdr}>GRIMME</div>
       <div className={styles.subcontainer}>
         <div className={styles.grimme}></div>
         <div className={styles.item}>

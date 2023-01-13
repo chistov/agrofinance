@@ -6,7 +6,8 @@ export default function Manitou() {
 
   return (
     <div className={styles.container}>
-      <img className={styles.hdr} src="/assets/logo-manitou.svg" alt="manitou logo"/>
+      {/*<img className={styles.hdr} src="/assets/logo-manitou.svg" alt="manitou logo"/>*/}
+      <div className={styles.tyres_hdr}>MANITOU</div>
       <div className={styles.subcontainer}>
         <div className={styles.manitou}></div>
         <div className={styles.item}>

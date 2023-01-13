@@ -15,7 +15,6 @@
     "bootstrap": "^5.2.2",
     "contentful": "^9.1.10",
     "formidable": "^2.0.1",
-    "fs": "^0.0.1-security",
     "js-cookie": "^3.0.1",
     "jsonwebtoken": "^8.5.1",
     "mime-types": "^2.1.35",

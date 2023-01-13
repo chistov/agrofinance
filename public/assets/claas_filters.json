@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Фильтр масляный для трактора",
+    "img": "/assets/tract_example.png",
+    "articul": "6005028743"
+  },
+  {
+    "name": "Фильтр масляный для комбайна",
+    "img": "/assets/comb_example.png",
+    "articul": "5459530"
+  }
+]

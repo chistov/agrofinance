@@ -6,7 +6,8 @@ export default function Kuhn() {
 
   return (
     <div className={styles.container}>
-      <img className={styles.kver} src="/assets/kuhn_logo.svg" alt="kuhn logo"/>
+      {/*<img className={styles.kver} src="/assets/kuhn_logo.svg" alt="kuhn logo"/>*/}
+      <div className={styles.tyres_hdr}>KUHN</div>
       <div className={styles.subcontainer}>
         <div className={styles.kuhn}></div>
         <div className={styles.item}>

@@ -23,6 +23,43 @@ $navbar-height: 90px;
     position: fixed;
 }
 
+.submenu {
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    text-align: left;
+    position: absolute;
+    right: -170px;
+    top: 0;
+    background: linear-gradient(0.25turn, #ff9140, #FF6341 );
+    z-index: 2;
+    display: none;
+
+    transition: max-height 1s;
+
+}
+
+.lem {
+    right: -135px;
+}
+
+.grim {
+    right: -115px;
+}
+
+.bob {
+    right: -245px;
+}
+
+.sbitem {
+    height: 40px;
+    vertical-align: middle;
+    line-height: 30px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    padding: 10px;
+}
+
 .item {
     cursor: pointer;
     margin-bottom: 1px;
@@ -33,12 +70,25 @@ $navbar-height: 90px;
     padding: 10px 50px 10px 10px;
     width: 200px;
     background: linear-gradient(0.25turn, #ff9140, #FF6341 );
-    transform: skewX(-10deg);
+    //transform: skewX(-10deg);
     transition: all 0.3s ease-in-out;
+
+    position: relative;
+
+    //div {
+    //    height: 0;
+    //}
+
+    &:hover {
+        .submenu {
+            display: block;
+            max-height: 300px;
+        }
+    }
 }
 
 .active {
-    transform: skewX(-10deg) translateX(40px);
+    //transform: skewX(-10deg) translateX(40px);
     background: linear-gradient(0.25turn, #ff6440, red );
 }
 

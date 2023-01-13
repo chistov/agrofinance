@@ -6,7 +6,8 @@ export default function Kverneland() {
 
   return (
     <div className={styles.container}>
-      <img className={styles.kver} src="/assets/kverneland-logo.png" alt="kverneland logo"/>
+      {/*<img className={styles.kver} src="/assets/kverneland-logo.png" alt="kverneland logo"/>*/}
+      <div className={styles.tyres_hdr}>KVERNELAND</div>
       <div className={styles.subcontainer}>
         <div className={styles.kvern}></div>
         <div className={styles.item}>

@@ -49,6 +49,11 @@ const Home: NextPage = () => {
           </span>
         </div>
       </section>
+      <section className={styles.footer}>
+        {/*<div className={styles.image}>*/}
+          {/*<img src="/assets/brand-combain.jpg" alt="tracktor"/>*/}
+        {/*</div>*/}
+      </section>
     </div>
   )
 }

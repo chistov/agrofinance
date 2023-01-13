@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from './Navbar.module.scss'
 import {useRouter} from "next/router";
 import {useEffect, useState} from "react";
@@ -55,8 +54,8 @@ const Navbar = () => {
         <Link href="/">
           <a className={styles.ml15 + ' ' + (path == '/' ? styles.active : '')}>ГЛАВНАЯ</a>
         </Link>
-        <Link href="/spare-parts">
-          <a className={styles.ml15 + ' ' + (path == '/spare-parts' ? styles.active : '')}>ЗАПЧАСТИ</a>
+        <Link href="/spare-parts/maschio">
+          <a className={styles.ml15 + ' ' + (path.includes('/spare-parts') ? styles.active : '')}>ЗАПЧАСТИ</a>
         </Link>
         <Link href='/address'>
           <a className={styles.ml15 + ' ' + (path == '/address' ? styles.active : '')}>СХЕМА ПРОЕЗДА</a>

@@ -6,7 +6,8 @@ export default function Lemken() {
 
   return (
     <div className={styles.container}>
-      <img className={styles.hdr} src="/assets/lemken-logo.svg" alt="lemken logo"/>
+      {/*<img className={styles.hdr} src="/assets/lemken-logo.svg" alt="lemken logo"/>*/}
+      <div className={styles.tyres_hdr}>LEMKEN</div>
       <div className={styles.subcontainer}>
         <div className={styles.lemken}></div>
         <div className={styles.item}>

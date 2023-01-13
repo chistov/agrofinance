@@ -6,7 +6,8 @@ export default function Amazone() {
 
   return (
     <div className={styles.container}>
-      <img className={styles.amazone} src="/assets/logo-amazone.svg" alt="amazone logo"/>
+      <div className={styles.tyres_hdr}>AMAZONE</div>
+      {/*<img className={styles.amazone} src="/assets/logo-amazone.svg" alt="amazone logo"/>*/}
       <div className={styles.subcontainer}>
         <div className={styles.amazonei}></div>
         <div className={styles.item}>
