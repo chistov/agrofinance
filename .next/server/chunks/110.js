@@ -7,6 +7,7 @@ exports.modules = {
 
 // Exports
 module.exports = {
+	"body": "Home_body__rmfLT",
 	"container": "Home_container__97eC3",
 	"gasp_container": "Home_gasp_container__h3Evi",
 	"subcontainer": "Home_subcontainer__up7Lb",
@@ -31,8 +32,9 @@ module.exports = {
 	"frank_logo": "Home_frank_logo__UsbmH",
 	"lemken_logo": "Home_lemken_logo__9mjNb",
 	"grimme_logo": "Home_grimme_logo___PQ9t",
-	"hdr_wrapper": "Home_hdr_wrapper__Yx03d",
 	"main": "Home_main__OVLM4",
+	"footer": "Home_footer__zed0_",
+	"image": "Home_image__GHKw_",
 	"intro": "Home_intro__TU_Sj"
 };
 

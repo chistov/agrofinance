@@ -8,7 +8,6 @@ import DefaultLayout from "@/components-common/defaultLayout";
 import Menu from "@/components-common/Menu";
 
 import man_f from '@/assets/man_filters.json';
-import man_e from '@/assets/man_engine.json';
 import man_p from '@/assets/man_povorot.json';
 import man_r from '@/assets/man_rulev.json';
 import man_s from '@/assets/man_stup.json';
@@ -42,10 +41,6 @@ const ManItem = (props) => {
       case 3:
         setData(man_p);
         name = 'Поворотный кулак';
-        break;
-      case 4:
-        setData(man_e);
-        name = 'Двигатель';
         break;
       default:
         router.push('/404');

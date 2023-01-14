@@ -1,4 +1,3 @@
-"use strict";
 (() => {
 var exports = {};
 exports.id = 660;
@@ -8,6 +7,7 @@ exports.modules = {
 /***/ 877:
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
@@ -161,6 +161,7 @@ function initHeadManager() {
 /***/ 2189:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
@@ -424,6 +425,8 @@ exports["default"] = _default;
 /***/ 8613:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
+var __webpack_unused_export__;
 
 
 const _excluded = ["strategy"];
@@ -438,30 +441,30 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-Object.defineProperty(exports, "__esModule", ({
+__webpack_unused_export__ = ({
   value: true
-}));
-Object.defineProperty(exports, "DocumentContext", ({
+});
+__webpack_unused_export__ = ({
   enumerable: true,
   get: function () {
     return _utils.DocumentContext;
   }
-}));
-Object.defineProperty(exports, "DocumentInitialProps", ({
+});
+__webpack_unused_export__ = ({
   enumerable: true,
   get: function () {
     return _utils.DocumentInitialProps;
   }
-}));
-Object.defineProperty(exports, "DocumentProps", ({
+});
+__webpack_unused_export__ = ({
   enumerable: true,
   get: function () {
     return _utils.DocumentProps;
   }
-}));
+});
 exports.Html = Html;
 exports.Main = Main;
-exports["default"] = void 0;
+__webpack_unused_export__ = void 0;
 
 var _react = _interopRequireWildcard(__webpack_require__(6689));
 
@@ -623,7 +626,7 @@ class Document extends _react.Component {
 
 }
 
-exports["default"] = Document;
+__webpack_unused_export__ = Document;
 
 function Html(props) {
   const {
@@ -1160,9 +1163,44 @@ function getAmpPath(ampPath, asPath) {
 
 /***/ }),
 
+/***/ 639:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Document)
+/* harmony export */ });
+/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6859);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+function Document() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(next_document__WEBPACK_IMPORTED_MODULE_0__.Html, {
+    children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx(next_document__WEBPACK_IMPORTED_MODULE_0__.Head, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("body", {
+      children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx(next_document__WEBPACK_IMPORTED_MODULE_0__.Main, {}), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx(next_document__WEBPACK_IMPORTED_MODULE_0__.NextScript, {}), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx("div", {
+        id: "modal-root"
+      })]
+    })]
+  });
+}
+
+/***/ }),
+
+/***/ 6859:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__(8613)
+
+
+/***/ }),
+
 /***/ 4140:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/server/get-page-files.js");
 
 /***/ }),
@@ -1170,6 +1208,7 @@ module.exports = require("next/dist/server/get-page-files.js");
 /***/ 9716:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/server/htmlescape.js");
 
 /***/ }),
@@ -1177,6 +1216,7 @@ module.exports = require("next/dist/server/htmlescape.js");
 /***/ 6368:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/server/utils.js");
 
 /***/ }),
@@ -1184,6 +1224,7 @@ module.exports = require("next/dist/server/utils.js");
 /***/ 6724:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/constants.js");
 
 /***/ }),
@@ -1191,6 +1232,7 @@ module.exports = require("next/dist/shared/lib/constants.js");
 /***/ 2796:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/head-manager-context.js");
 
 /***/ }),
@@ -1198,6 +1240,7 @@ module.exports = require("next/dist/shared/lib/head-manager-context.js");
 /***/ 9232:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
@@ -1205,7 +1248,16 @@ module.exports = require("next/dist/shared/lib/utils.js");
 /***/ 6689:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("react");
+
+/***/ }),
+
+/***/ 997:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react/jsx-runtime");
 
 /***/ })
 
@@ -1216,7 +1268,7 @@ module.exports = require("react");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [400], () => (__webpack_exec__(8613)));
+var __webpack_exports__ = __webpack_require__.X(0, [400], () => (__webpack_exec__(639)));
 module.exports = __webpack_exports__;
 
 })();

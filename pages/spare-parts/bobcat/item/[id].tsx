@@ -11,11 +11,6 @@ import bob_e from '@/assets/bob_engine.json';
 import bob_p from '@/assets/bob_povorot.json';
 import bob_r from '@/assets/bob_rulev.json';
 import bob_s from '@/assets/bob_stup.json';
-import claas_f from "@/assets/claas_filters.json";
-import claas_w from "@/assets/claas_work.json";
-import claas_c from "@/assets/claas_chains.json";
-import claas_st from "@/assets/claas_stars.json";
-import claas_b from "@/assets/claas_belts.json";
 
 const BobItem = (props) => {
   let id:string | string[] = '';
@@ -33,24 +28,24 @@ const BobItem = (props) => {
 
     switch ( +id) {
       case 0:
-        setData(claas_f);
+        setData(bob_f);
         name = 'Фильтры';
         break;
       case 1:
-        setData(claas_w);
-        name = 'Рабочие органы';
+        setData(bob_r);
+        name = 'Рулевые тяги';
         break;
       case 2:
-        setData(claas_c);
-        name = 'Цепи';
+        setData(bob_s);
+        name = 'Ступица переднего/заднего моста';
         break;
       case 3:
-        setData(claas_st);
-        name = 'Звездочки/Шестеренки';
+        setData(bob_p);
+        name = 'Поворотный кулак';
         break;
       case 4:
-        setData(claas_b);
-        name = 'Ремни';
+        setData(bob_e);
+        name = 'Двигатель';
         break;
       default:
         router.push('/404');

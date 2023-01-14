@@ -113,9 +113,9 @@ const Navbar = () => {
           children: "\u0413\u041B\u0410\u0412\u041D\u0410\u042F"
         })
       }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx(next_link__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        href: "/spare-parts",
+        href: "/spare-parts/maschio",
         children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx("a", {
-          className: (_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().ml15) + ' ' + (path == '/spare-parts' ? (_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().active) : ''),
+          className: (_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().ml15) + ' ' + (path.includes('/spare-parts') ? (_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().active) : ''),
           children: "\u0417\u0410\u041F\u0427\u0410\u0421\u0422\u0418"
         })
       }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx(next_link__WEBPACK_IMPORTED_MODULE_2__["default"], {
