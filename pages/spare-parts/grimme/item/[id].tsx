@@ -1,4 +1,4 @@
-import {useRouter} from "next/router";
+import Router from "next/router";
 import React, {useEffect, useState} from "react";
 import styles from "@/styles/Claas.module.scss";
 import Card from "react-bootstrap/Card";
@@ -11,43 +11,42 @@ import grimme_s from '@/assets/grimme_stars.json';
 import grimme_c from '@/assets/grimme_chains.json';
 import grimme_r from '@/assets/grimme_rolik.json';
 import grimme_t from '@/assets/grimme_trans.json';
+import {GetStaticPaths, GetStaticProps} from "next";
 
-const GrimmeItem = (props) => {
-  let id:string | string[] = '';
-  const router = useRouter()
+const GrimmeItem = ({post}) => {
   const [data, setData] = useState([]);
-  let name = '';
+  const [name, setName] = useState('');
 
   useEffect(() => {
     if (typeof window === "undefined") return null;
-    id = router.query.id
-    if(isNaN(+id)) {
-      id = window.location.href.substr(-2, 1)
-    }
+    // id = router.query.id
+    // if(isNaN(+id)) {
+    //   id = window.location.href.substr(-2, 1)
+    // }
 
-  switch (+id) {
+  switch (+post.id) {
     case 0:
       setData(grimme_f);
-      name = 'Фильтры';
+      setName('Фильтры');
       break;
     case 1:
       setData(grimme_t);
-      name = 'Транспортёры';
+      setName('Транспортёры');
       break;
     case 2:
       setData(grimme_s);
-      name = 'Звёздочки';
+      setName('Звёздочки');
       break;
     case 3:
       setData(grimme_r);
-      name = 'Ролики';
+      setName('Ролики');
       break;
     case 4:
       setData(grimme_c);
-      name = 'Цепи';
+      setName('Цепи');
       break;
     default:
-      router.push('/404');
+      Router.push('/404');
   }
   }, [])
 
@@ -88,5 +87,17 @@ const GrimmeItem = (props) => {
 }
 
 // This function gets called at build time
+export const getStaticPaths: GetStaticPaths = async () => {
+  // Get all possible 'id' values via API, file, etc.
+  const ids = ['0', '1', '2', '3', '4']; // Example
+  const paths = ids.map(id => ({
+    params: { id },
+  }));
+  return { paths, fallback: true };
+};
+
+export const getStaticProps: GetStaticProps = async ({params}) => {
+  return { props: { post: {id: params.id}} };
+};
 
 export default GrimmeItem;

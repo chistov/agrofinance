@@ -1,5 +1,5 @@
-import {useRouter} from "next/router";
-import React, {useEffect, useState} from "react";
+import Router from "next/router";
+import React, {useEffect, useRef, useState} from "react";
 import styles from "@/styles/Claas.module.scss";
 import Card from "react-bootstrap/Card";
 import Modal from "@/components-common/Modal";
@@ -12,46 +12,50 @@ import claas_st from '@/assets/claas_stars.json';
 import claas_b from '@/assets/claas_belts.json';
 import claas_c from '@/assets/claas_chains.json';
 import claas_w from '@/assets/claas_work.json';
+import {GetStaticPaths, GetStaticProps} from "next";
 
-const ClaasItem = () => {
-  let id:string | string[] = '';
+const ClaasItem = ({post}) => {
   const [data, setData] = useState([]);
-  let name = '';
+  const [name, setName] = useState('');
+  // const [id, setId] = useState('')
+  // const id = useRef('');
 
-  const router = useRouter()
+  // const router = useRouter()
   useEffect(() => {
+    // let id:string | string[] = '';
     if (typeof window === "undefined") return null;
-    id = router.query.id
-    if(isNaN(+id)) {
-      id = window.location.href.substr(-2, 1)
-    }
+    // id.current = Router.query.id as string;
+    // if(isNaN(+id.current)) {
+    //   id.current = window.location.href.substr(-2, 1);
+    // }
+    // console.log('post: ', post);
 
-    switch ( +id) {
+    switch ( +post.id) {
       case 0:
         setData(claas_f);
-        name = 'Фильтры';
+        setName('Фильтры');
         break;
       case 1:
         setData(claas_w);
-        name = 'Рабочие органы';
+        setName('Рабочие органы');
         break;
       case 2:
         setData(claas_c);
-        name = 'Цепи';
+        setName('Цепи');
         break;
       case 3:
         setData(claas_st);
-        name = 'Звездочки/Шестеренки';
+        setName('Звездочки/Шестеренки');
         break;
       case 4:
         setData(claas_b);
-        name = 'Ремни';
+        setName('Ремни');
         break;
       default:
-        router.push('/404');
+        Router.push('/404');
     }
 
-  }, [])
+  }, [post])
 
   // if(id == -1) return null;
 
@@ -91,17 +95,17 @@ const ClaasItem = () => {
   )
 }
 
-// export const getStaticPaths: GetStaticPaths = async () => {
-//   // Get all possible 'id' values via API, file, etc.
-//   const ids = ['0', '1', '2', '3', '4']; // Example
-//   const paths = ids.map(id => ({
-//     params: { id },
-//   }));
-//   return { paths, fallback: true };
-// };
-//
-// export const getStaticProps: GetStaticProps = async context => {
-//   return { props: {} };
-// };
+export const getStaticPaths: GetStaticPaths = async () => {
+  // Get all possible 'id' values via API, file, etc.
+  const ids = ['0', '1', '2', '3', '4']; // Example
+  const paths = ids.map(id => ({
+    params: { id },
+  }));
+  return { paths, fallback: true };
+};
+
+export const getStaticProps: GetStaticProps = async ({params}) => {
+  return { props: { post: {id: params.id}} };
+};
 
 export default ClaasItem;

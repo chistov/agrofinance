@@ -1,4 +1,4 @@
-import {useRouter} from "next/router";
+import Router from "next/router";
 import React, {useEffect, useState} from "react";
 import styles from "@/styles/Claas.module.scss";
 import Card from "react-bootstrap/Card";
@@ -11,44 +11,45 @@ import bob_e from '@/assets/bob_engine.json';
 import bob_p from '@/assets/bob_povorot.json';
 import bob_r from '@/assets/bob_rulev.json';
 import bob_s from '@/assets/bob_stup.json';
+import {GetStaticPaths, GetStaticProps} from "next";
 
-const BobItem = (props) => {
-  let id:string | string[] = '';
+const BobItem = ({post}) => {
+  // let id:string | string[] = '';
   const [data, setData] = useState([]);
-  let name = '';
+  const [name, setName] = useState('');
 
-  const router = useRouter()
+  // const router = useRouter()
 
   useEffect(() => {
     if (typeof window === "undefined") return null;
-    id = router.query.id
-    if(isNaN(+id)) {
-      id = window.location.href.substr(-2, 1)
-    }
+    // id = router.query.id
+    // if(isNaN(+id)) {
+    //   id = window.location.href.substr(-2, 1)
+    // }
 
-    switch ( +id) {
+    switch ( +post.id) {
       case 0:
         setData(bob_f);
-        name = 'Фильтры';
+        setName('Фильтры');
         break;
       case 1:
         setData(bob_r);
-        name = 'Рулевые тяги';
+        setName('Рулевые тяги');
         break;
       case 2:
         setData(bob_s);
-        name = 'Ступица переднего/заднего моста';
+        setName('Ступица переднего/заднего моста');
         break;
       case 3:
         setData(bob_p);
-        name = 'Поворотный кулак';
+        setName('Поворотный кулак');
         break;
       case 4:
         setData(bob_e);
-        name = 'Двигатель';
+        setName('Двигатель');
         break;
       default:
-        router.push('/404');
+        Router.push('/404');
     }
 
   }, [])
@@ -88,5 +89,19 @@ const BobItem = (props) => {
     </DefaultLayout>
   )
 }
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  // Get all possible 'id' values via API, file, etc.
+  const ids = ['0', '1', '2', '3', '4']; // Example
+  const paths = ids.map(id => ({
+    params: { id },
+  }));
+  return { paths, fallback: true };
+};
+
+export const getStaticProps: GetStaticProps = async ({params}) => {
+  return { props: { post: {id: params.id}} };
+};
+
 
 export default BobItem;

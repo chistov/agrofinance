@@ -1,5 +1,4 @@
-import {useRouter} from "next/router";
-import useSWR from "swr";
+import Router from "next/router";
 import React, {useEffect, useState} from "react";
 import styles from "@/styles/Claas.module.scss";
 import Card from "react-bootstrap/Card";
@@ -11,39 +10,38 @@ import man_f from '@/assets/man_filters.json';
 import man_p from '@/assets/man_povorot.json';
 import man_r from '@/assets/man_rulev.json';
 import man_s from '@/assets/man_stup.json';
+import {GetStaticPaths, GetStaticProps} from "next";
 
-const ManItem = (props) => {
-  let id:string | string[] = '';
+const ManItem = ({post}) => {
   const [data, setData] = useState([]);
-  let name = '';
+  const [name, setName] = useState('');
 
-  const router = useRouter()
   useEffect(() => {
     if (typeof window === "undefined") return null;
-    id = router.query.id
-    if(isNaN(+id)) {
-      id = window.location.href.substr(-2, 1)
-    }
+    // id = router.query.id
+    // if(isNaN(+id)) {
+    //   id = window.location.href.substr(-2, 1)
+    // }
 
-    switch ( +id) {
+    switch ( +post.id) {
       case 0:
         setData(man_f);
-        name = 'Фильтры';
+        setName('Фильтры');
         break;
       case 1:
         setData(man_r);
-        name = 'Рулевые тяги';
+        setName('Рулевые тяги');
         break;
       case 2:
         setData(man_s);
-        name = 'Ступица передняго/заднего моста';
+        setName('Ступица передняго/заднего моста');
         break;
       case 3:
         setData(man_p);
-        name = 'Поворотный кулак';
+        setName('Поворотный кулак');
         break;
       default:
-        router.push('/404');
+        Router.push('/404');
     }
   }, [])
 
@@ -82,5 +80,18 @@ const ManItem = (props) => {
     </DefaultLayout>
   )
 }
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  // Get all possible 'id' values via API, file, etc.
+  const ids = ['0', '1', '2', '3']; // Example
+  const paths = ids.map(id => ({
+    params: { id },
+  }));
+  return { paths, fallback: true };
+};
+
+export const getStaticProps: GetStaticProps = async ({params}) => {
+  return { props: { post: {id: params.id}} };
+};
 
 export default ManItem;
