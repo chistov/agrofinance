@@ -52,7 +52,7 @@ const BobItem = ({post}) => {
         Router.push('/404');
     }
 
-  }, [])
+  }, [post])
 
   // const [showModal, setShowModal] = useState(false);
 

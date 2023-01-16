@@ -43,7 +43,7 @@ const LemkenItem = ({post}) => {
       default:
         Router.push('/404');
     }
-  }, [])
+  }, [post])
 
   return (
     <DefaultLayout>
