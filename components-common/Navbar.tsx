@@ -1,6 +1,8 @@
 import styles from './Navbar.module.scss'
 import {useRouter} from "next/router";
 import {useEffect, useState} from "react";
+import Burger from '@animated-burgers/burger-squeeze'
+import '@animated-burgers/burger-squeeze/dist/styles.css'
 import Link from 'next/link'
 
 const Navbar = () => {
@@ -8,6 +10,7 @@ const Navbar = () => {
   // console.log('route: ', router.pathname);
   const [path, setPath] = useState(router.pathname);
   console.log('path: ', path);
+  const [open, setOpen] = useState(false);
 
   const [admin, setAdmin] = useState(false);
 
@@ -67,7 +70,10 @@ const Navbar = () => {
         </Link>
 
       </div>
-      {  admin ? <a onClick={logOut} className={styles.signout} href="#">Выйти</a> : null}
+
+      <Burger direction="right" className={ styles.hamburger + ' ' + (open ? 'open' : '')} onClick={() => setOpen(!open)}/>
+
+      {/*{  admin ? <a onClick={logOut} className={styles.signout} href="#">Выйти</a> : null}*/}
     </div>
   )
 }

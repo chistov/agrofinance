@@ -1,4 +1,7 @@
-$aside: 350px;
+$navbar-height: 90px;
+$aside: 450px;
+$menu-width: 345px;
+$menu-width-mob: 95vw;
 
 .container {
     display: flex;
@@ -11,16 +14,120 @@ $aside: 350px;
 
     display: flex;
     justify-content: start;
-    align-items: center;
+    //align-items: center;
+    padding-top: 30px;
+    @media (max-width: 768px) {
+      width: unset;
+    }
 }
 
-$navbar-height: 90px;
+.shtorka {
+    display: none;
+    position: fixed;
+    top: 90px;
+    left: $menu-width-mob;
+    height: calc(100vh - #{$navbar-height});
+    width: 40px;
+    background-color: #223140;
+    transition: all 0.3s ease-in-out;
+
+    @media (max-width: 768px) {
+        display: block;
+        width: 95vw;
+        bottom: 65vh;
+        top: unset;
+        z-index: 1;
+        left: 3vw;
+        height: 10vw;
+        background-color: white;
+        border-top-color: black;
+        border-style: solid;
+        border-bottom-color: snow;
+        border-top-left-radius: 10vw;
+        border-top-right-radius: 10vw;
+    }
+}
+
+.close_sh {
+    bottom: 0;
+}
+
+.chevron_sh {
+    //position: absolute;
+    //right: 5%;
+    cursor: pointer;
+    //&:after {
+    //    transition: all 0.3s ease-in-out;
+    //    border-style: solid;
+    //    border-width: 0.25em 0.25em 0 0;
+    //    content: '';
+    //    display: inline-block;
+    //    height: 5vw;
+    //    //left: 0.15em;
+    //    position: relative;
+    //    top: -1vw;
+    //    transform: rotate(135deg);
+    //    vertical-align: top;
+    //    width: 5vw;
+    //    //transform: rotate(45deg);
+    //}
+
+    &:before {
+        transition: all 0.3s ease-in-out;
+        border-style: solid;
+        border-width: 0.25em 0.25em 0 0;
+        content: '';
+        display: inline-block;
+        height: 5vw;
+        //left: 6vw;
+        position: relative;
+        top: -2.8vw;
+        transform: rotate(135deg);
+        vertical-align: top;
+        width: 5vw;
+        //transform: rotate(45deg);
+    }
+}
+
 
 .menu {
     display: flex;
     flex-direction: column;
-    padding-left: 10px;
+    //width: 100%;
+    height: calc(100vh - #{$navbar-height});
     position: fixed;
+    top: 90px;
+    width: $menu-width;
+    overflow-y: scroll;
+    transition: all 0.3s ease-in-out;
+    //padding-left: 10px;
+    //position: fixed;
+
+
+    @media (max-width: 768px) {
+        z-index: 1;
+        height: 65vh;
+        background-color: coral;
+        width: $menu-width-mob;
+        left: 3vw;
+        top: unset;
+        bottom: 0
+    }
+}
+
+.close {
+    //width: 0px;
+  height: 0;
+}
+
+.toggler {
+    text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column;
+    //margin-top: 42vh;
 }
 
 .submenu {
@@ -28,7 +135,7 @@ $navbar-height: 90px;
     flex-direction: column;
     max-height: 0;
     text-align: left;
-    position: absolute;
+    //position: absolute;
     right: -170px;
     top: 0;
     background: linear-gradient(0.25turn, #ff9140, #FF6341 );
@@ -64,32 +171,83 @@ $navbar-height: 90px;
     cursor: pointer;
     margin-bottom: 1px;
     color: ghostwhite;
-    text-align: end;
+    //text-align: start;
 
     border-bottom: 1px solid;
     padding: 10px 50px 10px 10px;
-    width: 200px;
+    width: 100%;
+    height: 35px;
+    font-size: 18px;
     background: linear-gradient(0.25turn, #ff9140, #FF6341 );
     //transform: skewX(-10deg);
     transition: all 0.3s ease-in-out;
-
     position: relative;
 
     //div {
     //    height: 0;
     //}
 
-    &:hover {
+    //&:hover {
         .submenu {
             display: block;
             max-height: 300px;
         }
+    //}
+
+}
+
+.item_sub {
+    padding-left: 40px;
+    display: none;
+    //height: 0px;
+}
+
+.open {
+    display: block;
+}
+
+.chevron {
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+    &:after {
+        //transition: all 0.3s ease-in-out;
+        border-style: solid;
+        border-width: 0.25em 0.25em 0 0;
+        content: '';
+        display: inline-block;
+        height: 0.45em;
+        left: 0.15em;
+        position: relative;
+        top: 0.15em;
+        //transform: rotate(-45deg);
+        vertical-align: top;
+        width: 0.45em;
+        transform: rotate(45deg);
+    }
+}
+
+.down {
+    &:after {
+        transform: rotate(135deg);
+    }
+}
+
+.sh_toggle {
+    //&:after {
+    //    transform: rotate(-45deg);
+    //    top: 1.5vw
+    //}
+    &:before {
+        transform: rotate(-45deg);
+        top: 0.5vw
     }
 }
 
 .active {
     //transform: skewX(-10deg) translateX(40px);
     background: linear-gradient(0.25turn, #ff6440, red );
+    //height: 250px;
 }
 
 .main {

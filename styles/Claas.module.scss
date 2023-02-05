@@ -24,6 +24,12 @@
   height: calc(100vh - 90px);
   align-items: center;
   padding-top: 50px;
+  @media (max-width: 768px) {
+    width: unset;
+    height: unset;
+    padding-bottom: 10vw;
+  }
+
 }
 
 .card {
@@ -33,6 +39,11 @@
   border-radius: 10px;
   margin-right: 2%;
   margin-bottom: 2%;
+  @media (max-width: 768px) {
+    width: unset;
+    margin: 2vw;
+  }
+
 }
 
 .card_img {
@@ -99,6 +110,10 @@
   //* {
   //  flex-basis: 50%;
   //}
+  @media (max-width: 768px) {
+    width: unset;
+    justify-content: center;
+  }
 
 }
 

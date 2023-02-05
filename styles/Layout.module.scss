@@ -2,8 +2,13 @@
   display: flex;
   margin-top: 90px;
 
+  @media (max-width: 768px) {
+    margin-top: 20vw;
+  }
+
+
   aside {
-    flex-basis: 20%;
+    //flex-basis: 20%;
   }
 
   div {
