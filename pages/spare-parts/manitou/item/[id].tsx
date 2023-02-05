@@ -83,7 +83,7 @@ const ManItem = ({post}) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // Get all possible 'id' values via API, file, etc.
-  const ids = ['0', '1', '2', '3', '4']; // Example
+  const ids = ['0', '1', '2', '3']; // Example
   const paths = ids.map(id => ({
     params: { id },
   }));

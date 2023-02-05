@@ -4,6 +4,7 @@ import {useRouter} from "next/router";
 import menu from '../public/assets/aside.json';
 
 const Menu = () => {
+  if (typeof window === "undefined") return null;
   const menuKeys = Object.keys(menu);
   const router = useRouter();
   const startBrandIdx = 13;
@@ -17,12 +18,26 @@ const Menu = () => {
   const [openG, setOpenG] = useState(false);
   const [openM, setOpenM] = useState(false);
   const [openB, setOpenB] = useState(false);
-  const [openSh, setOpenSh] = useState(true);
+  const [closeSh, setCloseSh] = useState(true);
   console.log('router: ', path);
 
+  const [size, setSize] = useState({
+    x: window.innerWidth,
+    y: window.innerHeight
+  });
+  const updateSize = () =>
+    setSize({
+      x: window.innerWidth,
+      y: window.innerHeight
+    });
+
   useEffect(() => {
-    setOpenC(sessionStorage.getItem('claas') == '1' ? true: false);
+    // setOpenC(sessionStorage.getItem('claas') == '1' ? true: false);
+    setCloseSh(size.x <= 768)
+    window.onresize = updateSize
   }, [])
+
+  useEffect(() => console.log(size.x), [size.x]);
 
   const clickItem = async (ev) => {
     const brand = ev.target.getAttribute('data-name');
@@ -53,7 +68,7 @@ const Menu = () => {
 
   return (
     <aside className={styles.aside}>
-      <div className={styles.menu + ' ' + (openSh ? styles.close: '')}>
+      <div className={styles.menu + ' ' + (closeSh ? styles.close: '')}>
         <div data-name="maschio" onClick={clickItem}
              className={styles.item + ' ' +(path == 'maschio' ? styles.active : '')}>{menuKeys[0]}</div>
         <div data-name="claas"  onClick={clickItem}
@@ -135,16 +150,16 @@ const Menu = () => {
         <div data-name="oil" onClick={clickItem}
              className={styles.item  + ' ' + (path == 'oil' ? styles.active : '')}>{menuKeys[12]}</div>
       </div>
-      <div className={styles.shtorka + ' ' + (openSh ? styles.close_sh: '')}
+      <div className={styles.shtorka + ' ' + (closeSh ? styles.close_sh: '')}
            onClick={(e) => {
              e.stopPropagation();
-             sessionStorage.setItem('shtorka', !openSh ? '1' : '0');
-             setOpenSh(!openSh);
+             sessionStorage.setItem('shtorka', !closeSh ? '1' : '0');
+             setCloseSh(!closeSh);
            }
            }
       >
         <div className={styles.toggler}>
-          <span className={styles.chevron_sh + ' ' + (openSh ? styles.sh_toggle: '')}></span>
+          <span className={styles.chevron_sh + ' ' + (closeSh ? styles.sh_toggle: '')}></span>
         </div>
       </div>
     </aside>
