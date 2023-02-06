@@ -37,9 +37,10 @@ $menu-width-mob: 95vw;
         bottom: 65vh;
         top: unset;
         z-index: 1;
-        left: 3vw;
+        left: 50%;
+        transform: translateX(-50%);
         height: 10vw;
-        background-color: white;
+        background-color: #c4c4c4;
         border-top-color: black;
         border-style: solid;
         border-bottom-color: snow;
@@ -109,7 +110,8 @@ $menu-width-mob: 95vw;
         height: 65vh;
         background-color: coral;
         width: $menu-width-mob;
-        left: 3vw;
+        left: 50%;
+        transform: translateX(-50%);
         top: unset;
         bottom: 0
     }

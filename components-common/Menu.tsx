@@ -35,6 +35,7 @@ const Menu = () => {
     // setOpenC(sessionStorage.getItem('claas') == '1' ? true: false);
     setCloseSh(size.x <= 768)
     window.onresize = updateSize
+
   }, [])
 
   useEffect(() => console.log(size.x), [size.x]);
@@ -153,7 +154,6 @@ const Menu = () => {
       <div className={styles.shtorka + ' ' + (closeSh ? styles.close_sh: '')}
            onClick={(e) => {
              e.stopPropagation();
-             sessionStorage.setItem('shtorka', !closeSh ? '1' : '0');
              setCloseSh(!closeSh);
            }
            }

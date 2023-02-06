@@ -262,18 +262,27 @@
     z-index: 2;
     margin-left: -10px;
     animation-duration: 1.5s;
+    @media (max-width: 768px) {
+      z-index: 1;
+    }
   }
 
   .dot:nth-child(4) {
     z-index: 2;
     margin-left: -10px;
     animation-duration: 2s;
+    @media (max-width: 768px) {
+      z-index: 1;
+    }
   }
 
   .dot:nth-child(5) {
     z-index: 2;
     margin-left: -10px;
     animation-duration: 2.5s;
+    @media (max-width: 768px) {
+      z-index: 1;
+    }
   }
 
   .dot:nth-child(6) {
@@ -327,6 +336,9 @@
   background-size: cover;
   height: 70%;
   opacity: 0.5;
+  @media (max-width: 768px) {
+    height: 75vw;
+  }
 }
 
 .image {
