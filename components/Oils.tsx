@@ -12,7 +12,9 @@ export default function Oils() {
             <tr>
               <td  className={styles.table} width="100">
                 <div className="wpmd">
-                  <div><img src="/assets/total-logo-top.png" alt={'total logo'} width="153" height="42" />
+                  <div>
+                    <img className={styles.logo}
+                      src="/assets/total-logo-top.png" alt={'total logo'} width="153" height="42" />
                   </div>
                 </div>
               </td>
@@ -36,7 +38,8 @@ export default function Oils() {
               <td className={styles.table}  rowSpan={8} width="100">
                 <div className="wpmd">
                   <div >
-                    <img src="/assets/oil_big.jpg" width="161" alt={'Масло бочка'} height="252"/>
+                    <img className={styles.oil_big}
+                      src="/assets/oil_big.jpg" width="161" alt={'Масло бочка'} height="252"/>
                     <img src="/assets/oil_mid.jpg" width="80" alt={'Масло канистра'} height="106"/></div>
                 </div>
               </td>

@@ -28,6 +28,11 @@
   width: 75%;
   margin: 0 auto;
   padding-top: 20px;
+
+  @media (max-width: 768px) {
+    height: unset;
+    width: 95%;
+  }
 }
 
 .subcontainer {

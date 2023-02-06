@@ -13,7 +13,7 @@ export default function BobPreview(props = null) {
       <DefaultLayout.Body>
         <Menu></Menu>
         <section className={styles.tech}>
-          <Bobcat/>
+        <Bobcat/>
         </section>
       </DefaultLayout.Body>
     </DefaultLayout>
