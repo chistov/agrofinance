@@ -202,7 +202,7 @@ export default function Oils() {
             <tr>
               <td className={styles.table}  width="100">
                 <div className="wpmd">
-                  <div ><img src="/assets/смазка.jpg" alt={'смазка'} width="88"  height="88" /></div>
+                  <div ><img src="/assets/sm.jpg" alt={'смазка'} width="88"  height="88" /></div>
                 </div>
               </td>
               <td className={styles.table}  width="284">
