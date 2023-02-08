@@ -32,18 +32,25 @@
   @media (max-width: 768px) {
     height: unset;
     width: 95%;
+    padding-bottom: 15vw;
   }
 }
 
 .subcontainer {
   display: flex;
   flex-basis: 25%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    &:nth-of-type(even) {
+      flex-direction: column-reverse;
+    }
+  }
 }
 
 .item {
   //flex-basis: 50%;
   width: 50%;
-
 }
 
 .pl10 {
@@ -76,6 +83,11 @@
   &:after {
     background-image: url("/assets/m_pochva.jpg");
   }
+
+  @media (max-width: 768px) {
+    height: 50vh;
+    width: 95%;
+  }
 }
 
 .posev {
@@ -83,6 +95,11 @@
 
   &:after {
     background-image: url("/assets/posev.jpg");
+  }
+
+  @media (max-width: 768px) {
+    height: 50vh;
+    width: 95%;
   }
 }
 
@@ -93,6 +110,11 @@
     background-image: url("/assets/oprisk.jpg");
   }
 
+
+  @media (max-width: 768px) {
+    height: 50vh;
+    width: 95%;
+  }
 }
 
 .kosilka {
@@ -100,6 +122,11 @@
 
   &:after {
     background-image: url("/assets/kosilka.jpg");
+  }
+
+  @media (max-width: 768px) {
+    height: 50vh;
+    width: 95%;
   }
 
 }

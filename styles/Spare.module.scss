@@ -196,6 +196,9 @@ $menu-width-mob: 95vw;
         }
     //}
 
+    @media (max-width: 768px) {
+        overflow-wrap: anywhere;
+    }
 }
 
 .item_sub {

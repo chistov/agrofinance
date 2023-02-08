@@ -114,6 +114,8 @@
   @media (max-width: 768px) {
     width: unset;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
 }
@@ -158,6 +160,11 @@
     position: absolute;
     z-index: -1;
   }
+
+  @media (max-width: 768px) {
+    height: 50vh;
+    width: 95%;
+  }
 }
 
 .lemken {
@@ -168,6 +175,11 @@
     opacity: 0.4;
     position: absolute;
     z-index: -1;
+  }
+
+  @media (max-width: 768px) {
+    height: 50vh;
+    width: 95%;
   }
 }
 
@@ -180,6 +192,11 @@
     position: absolute;
     z-index: -1;
   }
+
+  @media (max-width: 768px) {
+    height: 50vh;
+    width: 95%;
+  }
 }
 
 .john {
@@ -190,6 +207,11 @@
     opacity: 0.4;
     position: absolute;
     z-index: -1;
+  }
+
+  @media (max-width: 768px) {
+    height: 50vh;
+    width: 95%;
   }
 }
 
@@ -202,6 +224,11 @@
     position: absolute;
     z-index: -1;
   }
+
+  @media (max-width: 768px) {
+    height: 50vh;
+    width: 95%;
+  }
 }
 
 .manitou {
@@ -212,6 +239,11 @@
     opacity: 0.4;
     position: absolute;
     z-index: -1;
+  }
+
+  @media (max-width: 768px) {
+    height: 50vh;
+    width: 95%;
   }
 }
 
@@ -224,6 +256,11 @@
     position: absolute;
     z-index: -1;
   }
+
+  @media (max-width: 768px) {
+    height: 50vh;
+    width: 95%;
+  }
 }
 
 .kvern {
@@ -234,6 +271,11 @@
     opacity: 0.4;
     position: absolute;
     z-index: -1;
+  }
+
+  @media (max-width: 768px) {
+    height: 50vh;
+    width: 95%;
   }
 }
 
@@ -246,6 +288,11 @@
     position: absolute;
     z-index: -1;
   }
+
+  @media (max-width: 768px) {
+    height: 50vh;
+    width: 95%;
+  }
 }
 
 .pochva {
@@ -256,6 +303,13 @@
     opacity: 0.4;
     position: absolute;
     z-index: -1;
+
+
+  }
+
+  @media (max-width: 768px) {
+    height: 50vh;
+    width: 95%;
   }
 }
 
@@ -282,6 +336,8 @@
   padding: 90px;
   @media (max-width: 768px) {
     padding: unset;
+    overflow-wrap: anywhere;
+    width: 95%;
   }
 
 }
