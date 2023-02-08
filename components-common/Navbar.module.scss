@@ -55,6 +55,10 @@
   margin-left: 15px;
   padding: 20px;
 
+  @media (max-width: 1050px) { // mobile navbar
+    padding: 15px;
+  }
+
   @media (max-width: 768px) { // mobile navbar
     margin-left: unset;
     border-bottom: 2px solid red;
