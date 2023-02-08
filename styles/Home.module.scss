@@ -233,46 +233,106 @@
     border: 1px solid;
     animation-name: logo;
 
-
-    @media (max-width: 768px) {
-      //height: 18vw;
-      //width: 18vw;
+    @media (max-width: 1250px) { // quickfix
+      height: 100px;
+      width: 100px;
     }
+
+    //@media (max-width: 768px) {
+    //  height: 60vw;
+    //  width: 60vw;
+    //}
   }
 
   .maschio_logo {
     width: 93px;
     margin-top: 25px;
     margin-left: 23px;
+
+    @media (max-width: 1250px) { // quickfix
+      width: 68px;
+      margin-top: 15px;
+      margin-left: 15px;
+    }
+
+    //@media (max-width: 768px) {
+    //  //height: 50vh;
+    //  //width: 95%;
+    //  width: 41vw;
+    //  margin-top: 9vw;
+    //  margin-left: 10vw;
+    //}
   }
 
   .gates_logo {
     width: 115px;
     margin-top: 45px;
     margin-left: 15px;
+
+    @media (max-width: 1250px) { // quickfix
+      width: 80px;
+      margin-top: 25px;
+      margin-left: 10px;
+    }
+
+    //@media (max-width: 768px) {
+    //  width: 49vw;
+    //  margin-top: 16vw;
+    //  margin-left: 5vw;
+    //}
   }
 
   .pwgroup_logo {
     width: 126px;
     margin-top: 62px;
     margin-left: 8px;
+
+    @media (max-width: 1250px) { // quickfix
+      width: 85px;
+      margin-top: 40px;
+      margin-left: 5px;
+    }
+
+    //@media (max-width: 768px) {
+    //  width: 53vw;
+    //  margin-top: 26vw;
+    //  margin-left: 5vw;
+    //}
   }
 
   .frank_logo {
     width: 113px;
     margin-top: 60px;
     margin-left: 13px;
+
+    @media (max-width: 1250px) { // quickfix
+      width: 80px;
+      margin-top: 39px;
+      margin-left: 5px;
+    }
   }
 
   .lemken_logo {
     width: 125px;
     margin-top: 10px;
+
+    @media (max-width: 1250px) { // quickfix
+      width: 90px;
+      margin-top: 8px;
+      margin-left: 0px;
+    }
   }
 
   .grimme_logo {
     width: 115px;
     margin-top: 60px;
     margin-left: 16px;
+
+    @media (max-width: 1250px) { // quickfix
+      width: 90px;
+      margin-top: 40px;
+      margin-left: 5px;
+    }
   }
 
   .dot:first-child {
