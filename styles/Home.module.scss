@@ -238,10 +238,10 @@
       width: 100px;
     }
 
-    //@media (max-width: 768px) {
-    //  height: 60vw;
-    //  width: 60vw;
-    //}
+    @media (max-width: 768px) {
+      height: 60vw;
+      width: 60vw;
+    }
   }
 
   .maschio_logo {
@@ -255,13 +255,13 @@
       margin-left: 15px;
     }
 
-    //@media (max-width: 768px) {
-    //  //height: 50vh;
-    //  //width: 95%;
-    //  width: 41vw;
-    //  margin-top: 9vw;
-    //  margin-left: 10vw;
-    //}
+    @media (max-width: 768px) {
+      //height: 50vh;
+      //width: 95%;
+      width: 41vw;
+      margin-top: 9vw;
+      margin-left: 10vw;
+    }
   }
 
   .gates_logo {
@@ -275,11 +275,11 @@
       margin-left: 10px;
     }
 
-    //@media (max-width: 768px) {
-    //  width: 49vw;
-    //  margin-top: 16vw;
-    //  margin-left: 5vw;
-    //}
+    @media (max-width: 768px) {
+      width: 49vw;
+      margin-top: 16vw;
+      margin-left: 5vw;
+    }
   }
 
   .pwgroup_logo {
@@ -293,11 +293,11 @@
       margin-left: 5px;
     }
 
-    //@media (max-width: 768px) {
-    //  width: 53vw;
-    //  margin-top: 26vw;
-    //  margin-left: 5vw;
-    //}
+    @media (max-width: 768px) {
+      width: 53vw;
+      margin-top: 26vw;
+      margin-left: 5vw;
+    }
   }
 
   .frank_logo {
@@ -310,6 +310,12 @@
       margin-top: 39px;
       margin-left: 5px;
     }
+
+    @media (max-width: 768px) {
+      width: 53vw;
+      margin-top: 23vw;
+      margin-left: 3vw;
+    }
   }
 
   .lemken_logo {
@@ -320,6 +326,11 @@
       width: 90px;
       margin-top: 8px;
       margin-left: 0px;
+    }
+
+    @media (max-width: 768px) {
+      width: 58vw;
+      margin-top: 5vw;
     }
   }
 
@@ -332,6 +343,12 @@
       width: 90px;
       margin-top: 40px;
       margin-left: 5px;
+    }
+
+    @media (max-width: 768px) {
+      width: 53vw;
+      margin-top: 23vw;
+      margin-left: 3vw;
     }
   }
 
